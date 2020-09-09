@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : TP1.c
- Author      : 
+ Author      :
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
@@ -10,11 +10,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <float.h>
 #include "inputs.h"
 #include "calculos.h"
-//fijarse bilbio limits.h o float.h para pasar por max o min en funcion utn_getNumeros
 #define EXITO 0
-#define ERROR -1
 
 int main(void) {
 
@@ -25,8 +24,8 @@ int main(void) {
 	float resultadoResta;
 	float resultadoDivision;
 	float resultadoMultiplicacion;
-	long long int resultadoFactorialUno;
-	long long int resultadoFactorialDos;
+	long int resultadoFactorialUno;
+	long int resultadoFactorialDos;
 	int resultadoFuncionSumar;
 	int resultadoFuncionRestar;
 	int resultadoFuncionDividir;
@@ -37,26 +36,26 @@ int main(void) {
 	int obtuveOperandoDos;
 
 	do {
-		if (utn_getOptionMenu(&opcion, operandoUno, operandoDos, 1, 5, 3)==EXITO) {
+		if (getOptionMenu(&opcion, operandoUno, operandoDos, 1, 5, 3)==EXITO) {
 
 			switch (opcion) {
 			case 1:
-				obtuveOperandoUno = utn_getNumeroFloat(&operandoUno,"Ingrese primer operando: ","Error, debe ingresar un numero.\n",-999999999, 999999999,3);
+				obtuveOperandoUno = utn_getNumeroFloat(&operandoUno,"Ingrese primer operando: ","Error, debe ingresar un numero.\n",10.0, 25.0,3); //FLT_MIN, FLT_MAX
 				if (obtuveOperandoUno == EXITO)
 					printf("\nIngresado con exito\n");
 				else
-					printf("\nSe han acabado sus reintentos, intentelo nuevamente");
+					printf("\nSe han acabado sus reintentos");
 				break;
 			case 2:
-				obtuveOperandoDos = utn_getNumeroFloat(&operandoDos,"Ingrese segundo operando: ","Error, debe ingresar un numero.\n", -999999999, 999999999,3);
+				obtuveOperandoDos = utn_getNumeroFloat(&operandoDos,"Ingrese segundo operando: ","Error, debe ingresar un numero.\n", 10.0, 25.0,3);
 				if (obtuveOperandoDos == EXITO)
 					printf("Ingresado con exito\n");
 				else
-					printf("\nSe han acabado sus reintentos, intentelo nuevamente");
+					printf("\nSe han acabado sus reintentos");
 				break;
 			case 3:
 				if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
-					printf("Calculando...\n");
+					printf("Calculando...\n Prosiga.\n\n");
 					resultadoFuncionSumar = sumar(operandoUno, operandoDos,	&resultadoSuma);
 					resultadoFuncionRestar = restar(operandoUno, operandoDos, &resultadoResta);
 					resultadoFuncionDividir = dividir(operandoUno, operandoDos, &resultadoDivision);
@@ -73,28 +72,33 @@ int main(void) {
 					printf("\nResultados:\n");
 					if (resultadoFuncionSumar == EXITO) {
 						printf("\nLa suma de %.2f + %.2f es: %.2f", operandoUno, operandoDos, resultadoSuma);
+					} else {
+						printf("\nNo se pudo realizar la suma.");
 					}
 					if (resultadoFuncionRestar == EXITO) {
 						printf("\nLa resta de %.2f - %.2f es: %.2f", operandoUno, operandoDos, resultadoResta);
+					} else {
+						printf("\nNo se pudo realizar la resta.");
 					}
 					if (resultadoFuncionDividir == EXITO) {
 						printf("\nLa division de %.2f / %.2f es: %.2f",	operandoUno, operandoDos, resultadoDivision);
 					} else {
-						printf("\nNo se puede dividir por 0");
+						printf("\nNo se realizar la division. No se puede dividir por 0.");
 					}
 					if (resultadoFuncionMultiplicar == EXITO) {
 						printf("\nLa multiplicacion de %.2f x %.2f es: %.2f", operandoUno, operandoDos, resultadoMultiplicacion);
+					}else {
+						printf("\nNo se pudo realizar la multiplicacion.");
 					}
 					if (resultadoFuncionFactorialUno == EXITO) {
-						printf("\nEl factorial de: %d es %lld /",(int) operandoUno, resultadoFactorialUno);
+						printf("\nEl factorial de: %d es %ld /",(int) operandoUno, resultadoFactorialUno);
 					} else {
-						printf("\nOperando Uno: No se puede calcular el factorial de un numero negativo\n");
+						printf("\nError con su primer operando: No se puede calcular el factorial de un numero negativo.\n");
 					}
 					if (resultadoFuncionFactorialDos == EXITO) {
-						printf("El factorial de: %d es %lld\n", (int) operandoDos, resultadoFactorialDos);
-
+						printf("El factorial de: %d es %ld\n", (int) operandoDos, resultadoFactorialDos);
 					} else {
-						printf("\nOperando Dos: No se puede calcular el factorial de un numero negativo\n");
+						printf("\nError con su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
 					}
 
 				} /*fin if obtuve operandos*/else {
@@ -106,10 +110,10 @@ int main(void) {
 				break;
 			}//fin switch
 		}else{
-			printf("\nSe han acabado sus reintentos, intentelo nuevamente");
+			printf("\nSe han acabado sus reintentos.");
 		}
 
-		//system pause o cls, ver
+		//system pause o cls, ver que puedo hacer aca
 
 	} while (opcion != 5);
 
