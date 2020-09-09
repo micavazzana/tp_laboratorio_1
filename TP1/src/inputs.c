@@ -25,7 +25,7 @@ int getString(char* string, int len)
 
     if(string != NULL && len > 0)
     {
-        fflush(stdin);
+        fpurge(stdin);
         fgets(aux,sizeof(aux),stdin); //fgets (direccionDeLaVariable,cantidadCaracteresDeLaVariable,stdin)
         aux[strnlen(aux,sizeof(aux))-1]='\0';//pongo un \0 en vez del \n que me genera el fgets
 

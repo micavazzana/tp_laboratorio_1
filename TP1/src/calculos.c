@@ -9,16 +9,17 @@
  * \param float *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int sumar(float operandoUno, float operandoDos, float *pResultado) {
+int sumar(float operandoUno, float operandoDos, float *pResultado)
+{
+    int retorno = -1;
 
-	int retorno = -1;
+    if (pResultado != NULL)
+    {
+        *pResultado = operandoUno + operandoDos;
+        retorno = 0;
+    }
 
-	if (pResultado != NULL) {
-		*pResultado = operandoUno + operandoDos;
-		retorno = 0;
-	}
-
-	return retorno;
+    return retorno;
 }
 
 /**
@@ -28,16 +29,17 @@ int sumar(float operandoUno, float operandoDos, float *pResultado) {
  * \param float *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int restar(float operandoUno, float operandoDos, float *pResultado) {
+int restar(float operandoUno, float operandoDos, float *pResultado)
+{
+    int retorno = -1;
 
-	int retorno = -1;
+    if (pResultado != NULL)
+    {
+        *pResultado = operandoUno - operandoDos;
+        retorno = 0;
+    }
 
-	if (pResultado != NULL) {
-		*pResultado = operandoUno - operandoDos;
-		retorno = 0;
-	}
-
-	return retorno;
+    return retorno;
 }
 
 /**
@@ -47,15 +49,17 @@ int restar(float operandoUno, float operandoDos, float *pResultado) {
  * \param float *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int dividir(float operandoUno, float operandoDos, float *pResultado) {
-	int retorno = -1;
+int dividir(float operandoUno, float operandoDos, float *pResultado)
+{
+    int retorno = -1;
 
-	if (pResultado != NULL && operandoDos != 0) {
-		*pResultado = operandoUno / operandoDos;
-		retorno = 0;
-	}
+    if (pResultado != NULL && operandoDos != 0)
+    {
+        *pResultado = operandoUno / operandoDos;
+        retorno = 0;
+    }
 
-	return retorno;
+    return retorno;
 }
 
 /**
@@ -65,15 +69,17 @@ int dividir(float operandoUno, float operandoDos, float *pResultado) {
  * \param float *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int multiplicar(float operandoUno, float operandoDos, float *pResultado) {
-	int retorno = -1;
+int multiplicar(float operandoUno, float operandoDos, float *pResultado)
+{
+    int retorno = -1;
 
-	if (pResultado != NULL) {
-		*pResultado = operandoUno * operandoDos;
-		retorno = 0;
-	}
+    if (pResultado != NULL)
+    {
+        *pResultado = operandoUno * operandoDos;
+        retorno = 0;
+    }
 
-	return retorno;
+    return retorno;
 }
 
 /**
@@ -82,19 +88,21 @@ int multiplicar(float operandoUno, float operandoDos, float *pResultado) {
  * \param long int *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int calcularFactorial(float operando, long int*pResultado) {
+int calcularFactorial(float operando, long int*pResultado)
+{
+    int retorno = -1;
+    long int auxFactorial=1;
+    int i;
 
-	int retorno = -1;
-	long long int auxFactorial=1;
-	int i;
+    if (pResultado != NULL && operando >= 0)
+    {
+        for (i = operando; i > 0; i--)
+        {
+            auxFactorial = auxFactorial * i;
+        }
+        *pResultado = auxFactorial;
+        retorno = 0;
+    }
 
-	if (pResultado != NULL && operando >= 0) {
-		for (i = operando; i > 0; i--) {
-			auxFactorial = auxFactorial * i;
-		}
-		*pResultado = auxFactorial;
-		retorno = 0;
-	}
-
-	return retorno;
+    return retorno;
 }
