@@ -58,8 +58,7 @@ int main(void)
                 }
                 break;
             case 3:
-                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO)
-                {
+                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
                     printf("Calculando...\n Prosiga.\n\n");
                     resultadoFuncionSumar = sumar(operandoUno, operandoDos, &resultadoSuma);
                     resultadoFuncionRestar = restar(operandoUno, operandoDos, &resultadoResta);
@@ -72,47 +71,39 @@ int main(void)
                 }
                 break;
             case 4:
-                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO)
-                {
+                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
                     //si obtuve operandos entonces pregunto si se pudo calcular en cada caso e imprimo resultado
                     printf("\nResultados:\n");
-                    if (resultadoFuncionSumar == EXITO)
-                    {
-                        printf("\nLa suma de %.2f + %.2f es: %.2f", operandoUno, operandoDos, resultadoSuma);
-                    } else {
-                        printf("\nNo se pudo realizar la suma.");
-                    }
-                    if (resultadoFuncionRestar == EXITO)
-                    {
-                        printf("\nLa resta de %.2f - %.2f es: %.2f", operandoUno, operandoDos, resultadoResta);
-                    } else {
-                        printf("\nNo se pudo realizar la resta.");
-                    }
-                    if (resultadoFuncionDividir == EXITO)
-                    {
-                        printf("\nLa division de %.2f / %.2f es: %.2f",	operandoUno, operandoDos, resultadoDivision);
-                    } else {
-                        printf("\nNo se realizar la division. No se puede dividir por 0.");
-                    }
-                    if (resultadoFuncionMultiplicar == EXITO)
-                    {
-                        printf("\nLa multiplicacion de %.2f x %.2f es: %.2f", operandoUno, operandoDos, resultadoMultiplicacion);
-                    } else {
-                        printf("\nNo se pudo realizar la multiplicacion.");
-                    }
-                    if (resultadoFuncionFactorialUno == EXITO)
-                    {
-                        printf("\nEl factorial de: %d es %ld /",(int) operandoUno, resultadoFactorialUno);
-                    } else {
-                        printf("\nCon su primer operando: No se puede calcular el factorial de un numero negativo.\n");
-                    }
-                    if (resultadoFuncionFactorialDos == EXITO)
-                    {
-                        printf("El factorial de: %d es %ld\n", (int) operandoDos, resultadoFactorialDos);
-                    } else {
-                        printf("\nCon su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
-                    }
-
+					if (resultadoFuncionSumar == EXITO) {
+						printf("\nLa suma de %.2f + %.2f es: %.2f", operandoUno, operandoDos, resultadoSuma);
+					} else {
+						printf("\nNo se pudo realizar la suma.");
+					}
+					if (resultadoFuncionRestar == EXITO) {
+						printf("\nLa resta de %.2f - %.2f es: %.2f", operandoUno, operandoDos, resultadoResta);
+					} else {
+						printf("\nNo se pudo realizar la resta.");
+					}
+					if (resultadoFuncionDividir == EXITO) {
+						printf("\nLa division de %.2f / %.2f es: %.2f", operandoUno, operandoDos, resultadoDivision);
+					} else {
+						printf("\nNo se realizar la division. No se puede dividir por 0.");
+					}
+					if (resultadoFuncionMultiplicar == EXITO) {
+						printf("\nLa multiplicacion de %.2f x %.2f es: %.2f", operandoUno, operandoDos, resultadoMultiplicacion);
+					} else {
+						printf("\nNo se pudo realizar la multiplicacion.");
+					}
+					if (resultadoFuncionFactorialUno == EXITO) {
+						printf("\nEl factorial de: %d es %ld /", (int) operandoUno, resultadoFactorialUno);
+					} else {
+						printf("\nCon su primer operando: No se puede calcular el factorial de un numero negativo.\n");
+					}
+					if (resultadoFuncionFactorialDos == EXITO) {
+						printf("El factorial de: %d es %ld\n", (int) operandoDos, resultadoFactorialDos);
+					} else {
+						printf("\nCon su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
+					}
                 } /**fin if obtuve operandos**/ else {
                     printf("\nDebe ingresar ambos operandos primero.\n");
                 }
@@ -124,8 +115,7 @@ int main(void)
         } else {
             printf("\nSe han acabado sus reintentos.");
         }
-    }
-    while (opcion != 5);
+    } while (opcion != 5);
 
     return 0;
 }
