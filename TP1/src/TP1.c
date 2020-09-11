@@ -61,7 +61,7 @@ int main(void)
                 if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO)
                 {
                     printf("Calculando...\n Prosiga.\n\n");
-                    resultadoFuncionSumar = sumar(operandoUno, operandoDos,	&resultadoSuma);
+                    resultadoFuncionSumar = sumar(operandoUno, operandoDos, &resultadoSuma);
                     resultadoFuncionRestar = restar(operandoUno, operandoDos, &resultadoResta);
                     resultadoFuncionDividir = dividir(operandoUno, operandoDos, &resultadoDivision);
                     resultadoFuncionMultiplicar = multiplicar(operandoUno, operandoDos, &resultadoMultiplicacion);
@@ -124,7 +124,6 @@ int main(void)
         } else {
             printf("\nSe han acabado sus reintentos.");
         }
-        ///poner algun system pause o clear, ver que puedo hacer aca!
     }
     while (opcion != 5);
 
