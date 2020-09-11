@@ -34,6 +34,7 @@ int main(void)
     int resultadoFuncionFactorialDos;
     int obtuveOperandoUno;
     int obtuveOperandoDos;
+    int flagHacerCalculo = 0;
 
     do
     {
@@ -60,6 +61,7 @@ int main(void)
             case 3:
                 if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
                     printf("Calculando...\n Prosiga.\n\n");
+                    flagHacerCalculo = 1;
                     resultadoFuncionSumar = sumar(operandoUno, operandoDos, &resultadoSuma);
                     resultadoFuncionRestar = restar(operandoUno, operandoDos, &resultadoResta);
                     resultadoFuncionDividir = dividir(operandoUno, operandoDos, &resultadoDivision);
@@ -71,9 +73,9 @@ int main(void)
                 }
                 break;
             case 4:
-                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
-                	//si obtuve operandos entonces pregunto si se pudo calcular en cada caso e imprimo resultado
-                    printf("\nResultados:\n");
+                if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO && flagHacerCalculo == 1) {
+				//si obtuve operandos e hice los calculos, entonces consulto se pudo calcular en cada caso e imprimo resultado
+				printf("\nResultados:\n");
 					if (resultadoFuncionSumar == EXITO) {
 						printf("\nLa suma de %.2f + %.2f es: %.2f", operandoUno, operandoDos, resultadoSuma);
 					} else {
@@ -105,7 +107,7 @@ int main(void)
 						printf("\nCon su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
 					}
                 } /**fin if obtuve operandos**/ else {
-                    printf("\nDebe ingresar ambos operandos primero.\n");
+                	printf("\nDebe ingresar ambos operandos primero y realizar el calculo.\n");
                 }
                 break;
             case 5:
