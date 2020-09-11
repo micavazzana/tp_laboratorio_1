@@ -63,8 +63,8 @@ int main(void) {
 					resultadoFuncionRestar = restar(operandoUno, operandoDos, &resultadoResta);
 					resultadoFuncionDividir = dividir(operandoUno, operandoDos, &resultadoDivision);
 					resultadoFuncionMultiplicar = multiplicar(operandoUno, operandoDos, &resultadoMultiplicacion);
-					resultadoFuncionFactorialUno = calcularFactorial(operandoUno, &resultadoFactorialUno);
-					resultadoFuncionFactorialDos = calcularFactorial(operandoDos, &resultadoFactorialDos);
+					resultadoFuncionFactorialUno = calcularFactorial((int)operandoUno, &resultadoFactorialUno);
+					resultadoFuncionFactorialDos = calcularFactorial((int)operandoDos, &resultadoFactorialDos);
 				} else {
 					printf("\nDebe ingresar ambos operandos primero.\n");
 				}

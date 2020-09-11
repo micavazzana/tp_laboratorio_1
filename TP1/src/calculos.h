@@ -46,10 +46,10 @@ int multiplicar(float operandoUno, float operandoDos, float *pResultado);
 
 /**
  * \brief Calcula el FACTORIAL de un numero
- * \param float operando, operando ingresado
+ * \param int operando, operando ingresado
  * \param long int *pResultado, puntero a donde de guardara el resultado de la operacion
  * \return (-1) ERROR (0) EXITO
  */
-int calcularFactorial(float operando, long int *pResultado);
+int calcularFactorial(int operando, long int *pResultado);
 
 #endif /* CALCULOS_H_ */

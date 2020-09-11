@@ -54,7 +54,7 @@ int multiplicar(float operandoUno, float operandoDos, float *pResultado)
     return retorno;
 }
 
-int calcularFactorial(float operando, long int*pResultado)
+int calcularFactorial(int operando, long int*pResultado)
 {
     int retorno = -1;
     long int auxFactorial=1;
