@@ -1,6 +1,25 @@
-18:15:12 **** Incremental Build of configuration Debug for project TP1 ****
+18:23:58 **** Incremental Build of configuration Debug for project TP1 ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/TP1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP1.d" -MT"src/TP1.o" -o "src/TP1.o" "../src/TP1.c"
+Finished building: ../src/TP1.c
+ 
+Building file: ../src/calculos.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/calculos.d" -MT"src/calculos.o" -o "src/calculos.o" "../src/calculos.c"
+Finished building: ../src/calculos.c
+ 
+Building file: ../src/inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/inputs.d" -MT"src/inputs.o" -o "src/inputs.o" "../src/inputs.c"
+Finished building: ../src/inputs.c
+ 
+Building target: TP1
+Invoking: MacOS X C Linker
+gcc  -o "TP1"  ./src/TP1.o ./src/calculos.o ./src/inputs.o   
+Finished building target: TP1
+ 
 
-18:15:12 Build Finished. 0 errors, 0 warnings. (took 64ms)
+18:23:59 Build Finished. 0 errors, 0 warnings. (took 216ms)
 

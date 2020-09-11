@@ -80,4 +80,3 @@ int utn_getNumeroFloat(float *pResultado, char *mensaje, char *mensajeError, flo
 int getOptionMenu(int *pOpcion, float operandoUno, float operandoDos, int min, int max, int reintentos);
 
 #endif /* INPUTS_H_ */
-
