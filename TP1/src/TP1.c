@@ -1,11 +1,12 @@
 /*
  ============================================================================
  Name        : TP1.c
- Author      :
+ Author      : micavazzana
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
+ Proyecto hecho en macOS
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -103,13 +104,13 @@ int main(void)
                     {
                         printf("\nEl factorial de: %d es %ld /",(int) operandoUno, resultadoFactorialUno);
                     } else {
-                        printf("\nError con su primer operando: No se puede calcular el factorial de un numero negativo.\n");
+                        printf("\nCon su primer operando: No se puede calcular el factorial de un numero negativo.\n");
                     }
                     if (resultadoFuncionFactorialDos == EXITO)
                     {
                         printf("El factorial de: %d es %ld\n", (int) operandoDos, resultadoFactorialDos);
                     } else {
-                        printf("\nError con su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
+                        printf("\nCon su segundo operando: No se puede calcular el factorial de un numero negativo.\n");
                     }
 
                 } /**fin if obtuve operandos**/ else {
