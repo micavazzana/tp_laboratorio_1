@@ -72,7 +72,7 @@ int main(void)
                 break;
             case 4:
                 if (obtuveOperandoUno == EXITO && obtuveOperandoDos == EXITO) {
-                    //si obtuve operandos entonces pregunto si se pudo calcular en cada caso e imprimo resultado
+                	//si obtuve operandos entonces pregunto si se pudo calcular en cada caso e imprimo resultado
                     printf("\nResultados:\n");
 					if (resultadoFuncionSumar == EXITO) {
 						printf("\nLa suma de %.2f + %.2f es: %.2f", operandoUno, operandoDos, resultadoSuma);
