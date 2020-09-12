@@ -1,6 +1,15 @@
-19:43:14 **** Incremental Build of configuration Debug for project TP1 ****
+15:50:46 **** Incremental Build of configuration Debug for project TP1 ****
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/TP1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP1.d" -MT"src/TP1.o" -o "src/TP1.o" "../src/TP1.c"
+Finished building: ../src/TP1.c
+ 
+Building target: TP1
+Invoking: MacOS X C Linker
+gcc  -o "TP1"  ./src/TP1.o ./src/calculos.o ./src/inputs.o   
+Finished building target: TP1
+ 
 
-19:43:14 Build Finished. 0 errors, 0 warnings. (took 62ms)
+15:50:46 Build Finished. 0 errors, 0 warnings. (took 120ms)
 

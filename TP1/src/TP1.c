@@ -40,7 +40,7 @@ int main(void) {
 		if (getOptionMenu(&opcion, operandoUno, operandoDos, 1, 5, 3) == EXITO) {
 			switch (opcion) {
 			case 1:
-				obtuveOperandoUno = utn_getNumeroFloat(&operandoUno, "Ingrese primer operando: ", "Error, debe ingresar un numero.\n", FLT_MIN, FLT_MAX, 3);
+				obtuveOperandoUno = utn_getNumeroFloat(&operandoUno, "Ingrese primer operando: ", "Error, debe ingresar un numero.\n", -FLT_MAX, FLT_MAX, 3);
 				if (obtuveOperandoUno == EXITO) {
 					printf("\nIngresado con exito\n");
 				} else {
@@ -48,7 +48,7 @@ int main(void) {
 				}
 				break;
 			case 2:
-				obtuveOperandoDos = utn_getNumeroFloat(&operandoDos, "Ingrese segundo operando: ", "Error, debe ingresar un numero.\n", FLT_MIN, FLT_MAX, 3);
+				obtuveOperandoDos = utn_getNumeroFloat(&operandoDos, "Ingrese segundo operando: ", "Error, debe ingresar un numero.\n", -FLT_MAX, FLT_MAX, 3);
 				if (obtuveOperandoDos == EXITO) {
 					printf("\nIngresado con exito\n");
 				} else {
@@ -86,7 +86,7 @@ int main(void) {
 					if (resultadoFuncionDividir == EXITO) {
 						printf("\nLa division de %.2f / %.2f es: %.2f", operandoUno, operandoDos, resultadoDivision);
 					} else {
-						printf("\nNo se realizar la division. No se puede dividir por 0.");
+						printf("\nNo se pudo realizar la division. No se puede dividir por 0.");
 					}
 					if (resultadoFuncionMultiplicar == EXITO) {
 						printf("\nLa multiplicacion de %.2f x %.2f es: %.2f", operandoUno, operandoDos, resultadoMultiplicacion);
