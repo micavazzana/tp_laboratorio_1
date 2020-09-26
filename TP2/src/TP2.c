@@ -13,7 +13,7 @@
 #include <limits.h>
 #include "ArrayEmployees.h"
 #include "inputs.h"
-#define QTY_EMPLOYEE 12//cambiar por 1000 cuando termine el testeo
+#define QTY_EMPLOYEE 15//cambiar por 1000 cuando termine el testeo
 
 int main(void) {
 
@@ -49,7 +49,7 @@ int main(void) {
 					if(isAnyData(listEmployees,QTY_EMPLOYEE)==TRUE)//checks that there is data loaded
 					{
 						printEmployees(listEmployees, QTY_EMPLOYEE);
-						if(utn_getNumber(&bufferId,"\nIngrese el id del empleado que quiere modificar: ","\nError",0,INT_MAX,3)==SUCCESS &&
+						if(utn_getNumber(&bufferId,"\n\nIngrese el id del empleado que quiere modificar: ","\nError",0,INT_MAX,3)==SUCCESS &&
 								modifyEmployee(listEmployees, QTY_EMPLOYEE,bufferId) == SUCCESS)
 						{
 							printf("\nModificacion realizada con exito\n");
@@ -64,7 +64,7 @@ int main(void) {
 					if(isAnyData(listEmployees,QTY_EMPLOYEE)==TRUE)//checks that there is data loaded
 					{
 						printEmployees(listEmployees, QTY_EMPLOYEE);
-						if(utn_getNumber(&bufferId,"\nIngrese el id del empleado que quiere eliminar: ","\nError",0,INT_MAX,3)==SUCCESS &&
+						if(utn_getNumber(&bufferId,"\n\nIngrese el id del empleado que quiere eliminar: ","\nError",0,INT_MAX,3)==SUCCESS &&
 								removeEmployee(listEmployees, QTY_EMPLOYEE,bufferId) == SUCCESS)
 						{
 							printf("\nBaja realizada con exito\n");

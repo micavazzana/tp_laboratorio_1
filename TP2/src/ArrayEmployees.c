@@ -191,8 +191,8 @@ int sortEmployees(Employee* list, int len, int order)
 			{
 				switch(order) {
 				case UP: //de la A a la Z y salario menor a mayor
-					if(strncmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
-							(strncmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector))
+					if(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
+							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector))
 					{
 						aux = list[i];
 						list[i] = list[i + 1];
@@ -201,8 +201,8 @@ int sortEmployees(Employee* list, int len, int order)
 					}
 					break;
 				case DOWN: //de la Z a la A y salario mayor a menor
-					if(strncmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
-							(strncmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector))
+					if(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
+							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector))
 					{
 						aux = list[i];
 						list[i] = list[i + 1];
@@ -312,14 +312,14 @@ int hardCodeData(Employee* list, int* id)
 {
 	int result = ERROR;
 	char name[][NAME_LEN] = {"Mike","Eleven","Dustin","Will","Max","Lucas","Nancy","Steve","Jonathan","Joyce","Jim"};
-	char lastName[][NAME_LEN] = {"Whealer","","Henderson","Byers","Mayfield","Sinclair","Whealer","Harrington","Byers","Byers","Hooper"};
+	char lastName[][NAME_LEN] = {"Whealer","Hooper","Henderson","Byers","Mayfield","Sinclair","Whealer","Harrington","Byers","Byers","Hooper"};
 	float salary[] = {500,200,300,400,200,500,700,200,300,400,500};
 	int sector[] = {1,1,2,5,3,1,2,6,4,7,7};
 	int i;
 
 	if(list!=NULL && id!=NULL)
 	{
-		for(i=0;i<9;i++)
+		for(i=0;i<11;i++)
 		{
 			strcpy(list[i].name,name[i]);
 			strcpy(list[i].lastName,lastName[i]);
