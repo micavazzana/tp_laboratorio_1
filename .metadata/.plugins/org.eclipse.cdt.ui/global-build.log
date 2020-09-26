@@ -1,15 +1,221 @@
-15:50:41 **** Incremental Build of configuration Debug for project TP1 ****
+13:06:47 **** Incremental Build of configuration Debug for project TP2 ****
 make all 
 make: Nothing to be done for `all'.
-15:50:46 **** Incremental Build of configuration Debug for project TP1 ****
+13:06:53 **** Incremental Build of configuration Debug for project TP2 ****
 make all 
-Building file: ../src/TP1.c
+make: Nothing to be done for `all'.
+13:50:42 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP1.d" -MT"src/TP1.o" -o "src/TP1.o" "../src/TP1.c"
-Finished building: ../src/TP1.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:233:35: error: too few arguments to function call, expected 2, have 1
+                        printOneEmployee(list[i]);
+                        ~~~~~~~~~~~~~~~~        ^
+../src/ArrayEmployees.h:103:1: note: 'printOneEmployee' declared here
+int printOneEmployee(Employee* list, int len);
+^
+../src/ArrayEmployees.c:364:17: error: called object type 'float' is not a function or function pointer
+                if(totalSalary(list,len,&totalSalary)==SUCCESS)
+                   ~~~~~~~~~~~^
+../src/ArrayEmployees.c:386:18: error: called object type 'float' is not a function or function pointer
+        if(averageSalary(list,len,&averageSalary)==SUCCESS)
+           ~~~~~~~~~~~~~^
+../src/ArrayEmployees.c:392:29: error: too few arguments to function call, expected 2, have 1
+                                printOneEmployee(list[i]);
+                                ~~~~~~~~~~~~~~~~        ^
+../src/ArrayEmployees.c:242:1: note: 'printOneEmployee' declared here
+int printOneEmployee(Employee* list, int len)
+^
+4 errors generated.
+make: *** [src/ArrayEmployees.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:52:52 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:233:28: error: passing 'Employee' to parameter of incompatible type 'Employee *'; take the address with &
+                        printOneEmployee(list[i]);
+                                         ^~~~~~~
+                                         &
+../src/ArrayEmployees.h:103:32: note: passing argument to parameter 'list' here
+int printOneEmployee(Employee* list);
+                               ^
+../src/ArrayEmployees.c:374:31: error: invalid operands to binary expression ('int (*)(Employee *, int, float *)' and 'int')
+                *averageSalary = totalSalary/qtyEmployee;
+                                 ~~~~~~~~~~~^~~~~~~~~~~~
+../src/ArrayEmployees.c:392:22: error: passing 'Employee' to parameter of incompatible type 'Employee *'; take the address with &
+                                printOneEmployee(list[i]);
+                                                 ^~~~~~~
+                                                 &
+../src/ArrayEmployees.c:242:32: note: passing argument to parameter 'list' here
+int printOneEmployee(Employee* list)
+                               ^
+3 errors generated.
+make: *** [src/ArrayEmployees.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:53:45 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:245:9: error: invalid operands to binary expression ('Employee' and 'void *')
+        if(list!=NULL)
+           ~~~~^ ~~~~
+../src/ArrayEmployees.c:374:31: error: invalid operands to binary expression ('int (*)(Employee *, int, float *)' and 'int')
+                *averageSalary = totalSalary/qtyEmployee;
+                                 ~~~~~~~~~~~^~~~~~~~~~~~
+2 errors generated.
+make: *** [src/ArrayEmployees.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:54:38 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:337:5: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:349:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:337:2: note: remove the 'if' if its condition is always true
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:337:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:349:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:337:5: note: remove the '&&' if its condition is always true
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:337:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+           ^~~~~~~~~~
+../src/ArrayEmployees.c:349:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:337:5: note: remove the '&&' if its condition is always true
+        if(list!=NULL && len>0 && totalSalary!=NULL)
+           ^~~~~~~~~~~~~
+../src/ArrayEmployees.c:333:12: note: initialize the variable 'result' to silence this warning
+        int result;
+                  ^
+                   = 0
+../src/ArrayEmployees.c:371:31: error: invalid operands to binary expression ('int (*)(Employee *, int, float *)' and 'int')
+                *averageSalary = totalSalary/qtyEmployee;
+                                 ~~~~~~~~~~~^~~~~~~~~~~~
+3 warnings and 1 error generated.
+make: *** [src/ArrayEmployees.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:56:23 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:359:5: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:374:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:359:2: note: remove the 'if' if its condition is always true
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:359:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:374:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:359:5: note: remove the '&&' if its condition is always true
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.c:359:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+           ^~~~~~~~~~
+../src/ArrayEmployees.c:374:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../src/ArrayEmployees.c:359:5: note: remove the '&&' if its condition is always true
+        if(list!=NULL && len>0 && finalAverageSalary!=NULL)
+           ^~~~~~~~~~~~~
+../src/ArrayEmployees.c:354:12: note: initialize the variable 'result' to silence this warning
+        int result;
+                  ^
+                   = 0
+3 warnings generated.
+Finished building: ../src/ArrayEmployees.c
  
-Building target: TP1
+Building file: ../src/TP2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP2.d" -MT"src/TP2.o" -o "src/TP2.o" "../src/TP2.c"
+Finished building: ../src/TP2.c
+ 
+Building target: TP2
 Invoking: MacOS X C Linker
-gcc  -o "TP1"  ./src/TP1.o ./src/calculos.o ./src/inputs.o   
-Finished building target: TP1
+gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
+Finished building target: TP2
  
+13:56:53 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+Finished building: ../src/ArrayEmployees.c
+ 
+Building target: TP2
+Invoking: MacOS X C Linker
+gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
+Finished building target: TP2
+ 
+13:56:59 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+make: Nothing to be done for `all'.
+14:03:46 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:283:34: error: too many arguments to function call, expected 2, have 3
+                                        aboveAverageSalary(list,len,&bufferAverageSalary);
+                                        ~~~~~~~~~~~~~~~~~~          ^~~~~~~~~~~~~~~~~~~~
+../src/ArrayEmployees.h:140:1: note: 'aboveAverageSalary' declared here
+int aboveAverageSalary(Employee* list, int len);
+^
+1 error generated.
+make: *** [src/ArrayEmployees.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+14:04:06 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+Finished building: ../src/ArrayEmployees.c
+ 
+Building target: TP2
+Invoking: MacOS X C Linker
+gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
+Finished building target: TP2
+ 
+14:04:07 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+make: Nothing to be done for `all'.
+14:04:43 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+Building file: ../src/ArrayEmployees.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+Finished building: ../src/ArrayEmployees.c
+ 
+Building target: TP2
+Invoking: MacOS X C Linker
+gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
+Finished building target: TP2
+ 
+14:04:45 **** Incremental Build of configuration Debug for project TP2 ****
+make all 
+make: Nothing to be done for `all'.
