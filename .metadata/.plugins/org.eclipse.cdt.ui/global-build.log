@@ -1,12 +1,16 @@
-15:54:59 **** Clean-only build of configuration Debug for project TP2 ****
-make clean 
-rm -rf  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o  ./src/ArrayEmployees.d ./src/TP2.d ./src/inputs.d  TP2
- 
-15:55:02 **** Build of configuration Debug for project TP2 ****
+20:39:59 **** Build of configuration Debug for project TP2 ****
 make all 
 Building file: ../src/ArrayEmployees.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
+../src/ArrayEmployees.c:193:66: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                                if( (list[i].isEmpty == FALSE && list[i+1].isEmpty == FALSE) &&
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+../src/ArrayEmployees.c:193:66: note: place parentheses around the '&&' expression to silence this warning
+                                if( (list[i].isEmpty == FALSE && list[i+1].isEmpty == FALSE) &&
+                                                                                             ^
+                                    (
+1 warning generated.
 Finished building: ../src/ArrayEmployees.c
  
 Building file: ../src/TP2.c
@@ -24,27 +28,7 @@ Invoking: MacOS X C Linker
 gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
 Finished building target: TP2
  
-15:55:33 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building file: ../src/TP2.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP2.d" -MT"src/TP2.o" -o "src/TP2.o" "../src/TP2.c"
-Finished building: ../src/TP2.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-15:55:35 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-15:57:30 **** Incremental Build of configuration Debug for project TP2 ****
+20:40:23 **** Incremental Build of configuration Debug for project TP2 ****
 make all 
 Building file: ../src/ArrayEmployees.c
 Invoking: GCC C Compiler
@@ -56,218 +40,6 @@ Invoking: MacOS X C Linker
 gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
 Finished building target: TP2
  
-15:57:31 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-15:58:42 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-15:58:43 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-15:59:57 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-15:59:58 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:00:53 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:00:59 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:01:00 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:01:27 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:01:29 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:02:18 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:02:20 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:02:48 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building file: ../src/TP2.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TP2.d" -MT"src/TP2.o" -o "src/TP2.o" "../src/TP2.c"
-Finished building: ../src/TP2.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:02:50 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:03:13 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:03:14 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:04:54 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:04:55 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:26:04 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:26:05 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:26:41 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:26:43 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:27:33 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:27:35 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:31:44 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:31:46 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-make: Nothing to be done for `all'.
-16:33:03 **** Incremental Build of configuration Debug for project TP2 ****
-make all 
-Building file: ../src/ArrayEmployees.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ArrayEmployees.d" -MT"src/ArrayEmployees.o" -o "src/ArrayEmployees.o" "../src/ArrayEmployees.c"
-Finished building: ../src/ArrayEmployees.c
- 
-Building target: TP2
-Invoking: MacOS X C Linker
-gcc  -o "TP2"  ./src/ArrayEmployees.o ./src/TP2.o ./src/inputs.o   
-Finished building target: TP2
- 
-16:33:05 **** Incremental Build of configuration Debug for project TP2 ****
+20:40:25 **** Incremental Build of configuration Debug for project TP2 ****
 make all 
 make: Nothing to be done for `all'.

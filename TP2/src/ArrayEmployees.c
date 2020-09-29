@@ -189,18 +189,12 @@ int sortEmployees(Employee* list, int len, int order)
 			disorderedState = 0;
 			for(i = 0; i < (len - 1); i++)
 			{
-				//from A to Z and sector lower to higher
-				if(order == UP && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
-							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector)))
-				{
-					aux = list[i];
-					list[i] = list[i + 1];
-					list[i + 1] = aux;
-					disorderedState = 1;
-				}
-				//from Z to A and sector higher to lower
-				else if(order == DOWN && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
-							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector)))
+
+				if(list[i].isEmpty == FALSE && list[i+1].isEmpty == FALSE &&
+				((order == UP && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
+						(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector))) ||
+				(order == DOWN && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
+						(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector)))))
 				{
 					aux = list[i];
 					list[i] = list[i + 1];
@@ -303,6 +297,7 @@ int isAnyData(Employee* list, int len)
 			if(list[i].isEmpty == FALSE)//if there is data
 			{
 				result = TRUE;
+				break;//there is no need to keep asking, since I just found that at list there is one employee in the array
 			}
 		}
 	}
@@ -386,7 +381,7 @@ int printEmployeesAboveAverageSalary(Employee* list, int len, int* qtyEmployeesA
 	int result = ERROR;
 	float bufferAverageSalary;
 	int i;
-	int counterEmployees=0;
+	int qtyEmployee=0;
 
 	if(averageSalary(list,len,&bufferAverageSalary)==SUCCESS)
 	{
@@ -395,10 +390,10 @@ int printEmployeesAboveAverageSalary(Employee* list, int len, int* qtyEmployeesA
 			if(list[i].isEmpty == FALSE && list[i].salary >= bufferAverageSalary)
 			{
 				printOneEmployee(list[i]);
-				counterEmployees++;
+				qtyEmployee++;
 			}
 		}
-		*qtyEmployeesAboveAverageSalary = counterEmployees;
+		*qtyEmployeesAboveAverageSalary = qtyEmployee;
 		result = SUCCESS;
 	}
 	return result;
