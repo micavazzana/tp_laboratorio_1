@@ -13,7 +13,7 @@
 #include <limits.h>
 #include "ArrayEmployees.h"
 #include "inputs.h"
-#define QTY_EMPLOYEE 15//cambiar por 1000 cuando termine el testeo
+#define QTY_EMPLOYEE 1000
 
 int main(void) {
 
@@ -24,6 +24,7 @@ int main(void) {
 
 	if(initEmployees(listEmployees,QTY_EMPLOYEE)==SUCCESS)
 	{
+		//Here there is alredy loaded data, for avoiding to complete each time that is tested. Don't comment to use it:
 		hardCodeData(listEmployees,&id);
 		do
 		{

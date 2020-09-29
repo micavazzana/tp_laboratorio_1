@@ -12,7 +12,7 @@
 
 static int getString(char* string, int len);
 static int getInt(int* integer);
-static int getFloat(float * floating);
+static int getFloat(float * decimalNumber);
 static int getText(char* text, int len);
 static int getAlphaNumeric(char* text, int len);
 static int validationInt(char* num);
@@ -20,7 +20,7 @@ static int validationFloat(char* num);
 static int validationOnlyLetter(char* string);
 static int validationAlphaNumeric(char* string);
 
-//Functions designed in UTN to request data from a user // Funciones diseñadas en UTN para pedir datos a un usuario
+//Functions designed to request data from a user
 
 int utn_getNumber(int* pNumber, char* message, char* errorMessage, int min, int max,int retries)
 {
@@ -124,13 +124,14 @@ int utn_getAlphanumeric(char* name, int len, char* message, char* errorMessage, 
 	return result;
 }
 
-//Functions that obtain data and validates that data// Funciones que obtienen datos y validan esos datos
+
+//Functions that obtain data and validates that data
 
 /**
- * \brief Obtiene una cadena de caracteres // Gets a string of characters
- * \param char* string, puntero a la cadena donde deja lo obtenido//pointer to the string where it leaves the obtained
- * \param int len, tamanio de la cadena que se recibe//size of the string that receives
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \brief Gets a string of characters
+ * \param char* string, pointer to the string where it leaves the obtained
+ * \param int len, size of the string that it receives
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int getString(char *string, int len) {
 
@@ -139,15 +140,18 @@ static int getString(char *string, int len) {
 
 	if (string != NULL && len > 0)
 	{
-		fpurge(stdin); //__fpurge(stdin);//fflush(stdin);
+		fpurge(stdin); //__fpurge(stdin); LINUX //fflush(stdin); WINDOWS
 		fgets(aux, sizeof(aux), stdin);
-		aux[strnlen(aux, sizeof(aux)) - 1] = '\0';
+		if(aux[strnlen(aux, sizeof(aux)) - 1] == '\n')
+		{
+			aux[strnlen(aux, sizeof(aux)) - 1] = '\0';
+		}
 
-		if (aux[0] == '\0')
+		if(aux[0] == '\0')
 		{
 			result = ERROR;
 		}
-		else if (strnlen(aux, sizeof(aux)) <= len)
+		else if(strnlen(aux, sizeof(aux)) <= len)
 		{
 			strncpy(string, aux, len);
 			result = SUCCESS;
@@ -157,9 +161,9 @@ static int getString(char *string, int len) {
 }
 
 /**
- * \brief Obtiene un entero y lo valida // Gets an integer and validates it
- * \param int* entero, puntero al espacio donde deja lo obtenido // pointer to the space where it leaves the obtained
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \brief Gets an integer and validates it
+ * \param int* integer, pointer to the space where it leaves the obtained
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int getInt(int* integer)
 {
@@ -178,20 +182,20 @@ static int getInt(int* integer)
 }
 
 /**
- * \brief Obtiene un flotante y lo valida // Gets a floating and validates it
- * \param float* floating, puntero al espacio donde deja lo obtenido // pointer to the space where it leaves the obtained
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \brief Gets a decimal number and validates it
+ * \param float* decimalNumber, pointer to the space where it leaves the obtained
+ * \return (-1) ERROR (0) SUCCESS
  */
-static int getFloat(float * floating)
+static int getFloat(float * decimalNumber)
 {
     int result = ERROR;
     char aux[4096];
 
-    if(floating!= NULL)
+    if(decimalNumber!= NULL)
     {
         if(getString(aux,sizeof(aux))== SUCCESS && validationFloat(aux) == SUCCESS)
         {
-            *floating = atof(aux);
+            *decimalNumber = atof(aux);
             result = SUCCESS;
         }
     }
@@ -199,9 +203,9 @@ static int getFloat(float * floating)
 }
 
 /**
- * \brief Obtiene un texto de solo letras y lo valida // Gets a text of only letters and validates it
- * \param char* text, puntero al espacio donde deja lo obtenido // pointer to the space where it leaves the obtained
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \brief Gets a text of only letters and validates it
+ * \param char* text, pointer to the space where it leaves the obtained
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int getText(char* text, int len)
 {
@@ -220,9 +224,9 @@ static int getText(char* text, int len)
 }
 
 /**
- * \brief Obtiene un texto de letras y numeros y lo valida // Gets a text of letters and numbers and validates it
- * \param char* text, puntero al espacio donde deja lo obtenido // pointer to the space where it leaves the obtained
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \brief Gets a text of letters and numbers and validates it
+ * \param char* text, pointer to the space where it leaves the obtained
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int getAlphaNumeric(char* text, int len)
 {
@@ -240,15 +244,14 @@ static int getAlphaNumeric(char* text, int len)
     return result;
 }
 
-//Functions that validates data // Funciones que validan datos
+
+//Functions that validates data
 
 /**
- * \brief Valida que lo recibe sea un numero.
- * 		  Contempla tanto negativos como positivos
- * 		  Validates that what you receive it is a number.
+ * \brief Validates that what it receives is a number.
  * 		  Contemplates both negatives and positives.
- * \param char *num, puntero a la cadena que se busca validar // pointer to the string to be validated
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \param char *num, pointer to the string to be validated
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int validationInt(char* num)
 {
@@ -274,12 +277,10 @@ static int validationInt(char* num)
 }
 
 /**
- * \brief Valida que lo recibe sea un numero.
- * 		  Contempla tanto negativos como positivos y decimales.
- * 		  Validates that what you receive it is a number.
+ * \brief Validates that what it receives is a number.
  * 		  Contemplates both negative and positive and decimal.
- * \param char *num, puntero a la cadena que se busca validar // pointer to the string to be validated
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \param char *num, pointer to the string to be validated
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int validationFloat(char* num)
 {
@@ -345,12 +346,10 @@ static int validationOnlyLetter(char* string)
 }
 
 /**
- * \brief Valida que lo recibe sea una letra o un numero.
- * 		  Contempla espacios.
- * 		  Validates that what you receive it is a letter or a number.
+ * \brief Validates that what you receive it is a letter or a number.
  * 		  Contemplates spaces.
- * \param char *string, puntero a la cadena que se busca validar // pointer to the string to be validated
- * \return (-1) ERROR (0) EXITO // (-1) ERROR (0) SUCCESS
+ * \param char *string, pointer to the string to be validated
+ * \return (-1) ERROR (0) SUCCESS
  */
 static int validationAlphaNumeric(char* string)
 {

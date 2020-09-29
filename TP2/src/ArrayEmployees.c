@@ -11,8 +11,8 @@
 #include <string.h>
 #include <limits.h>
 #include <float.h>
-#define UP 0
-#define DOWN 1
+#define UP 1
+#define DOWN 0
 
 int initEmployees(Employee* list, int len)
 {
@@ -182,34 +182,30 @@ int sortEmployees(Employee* list, int len, int order)
 	Employee aux;
 	int disorderedState=1;
 
-	if(list != NULL && len > 0 && (order == 1 || order == 0))
+	if(list != NULL && len > 0 && (order>=0 || order<=1))
 	{
-		while(disorderedState)//mientras este desordenado
+		while(disorderedState)
 		{
 			disorderedState = 0;
 			for(i = 0; i < (len - 1); i++)
 			{
-				switch(order) {
-				case UP: //de la A a la Z y salario menor a mayor
-					if(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
-							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector))
-					{
-						aux = list[i];
-						list[i] = list[i + 1];
-						list[i + 1] = aux;
-						disorderedState = 1;
-					}
-					break;
-				case DOWN: //de la Z a la A y salario mayor a menor
-					if(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
-							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector))
-					{
-						aux = list[i];
-						list[i] = list[i + 1];
-						list[i + 1] = aux;
-						disorderedState = 1;
-					}
-					break;
+				//from A to Z and sector lower to higher
+				if(order == UP && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
+							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector)))
+				{
+					aux = list[i];
+					list[i] = list[i + 1];
+					list[i + 1] = aux;
+					disorderedState = 1;
+				}
+				//from Z to A and sector higher to lower
+				else if(order == DOWN && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
+							(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector)))
+				{
+					aux = list[i];
+					list[i] = list[i + 1];
+					list[i + 1] = aux;
+					disorderedState = 1;
 				}
 			}
 		}
@@ -221,6 +217,7 @@ int sortEmployees(Employee* list, int len, int order)
 int printOneEmployee(Employee list)
 {
 	int result=ERROR;
+
 	if(list.isEmpty == FALSE)
 	{
 		printf ("\n%5d %15s %15s %10.2f %5d",list.id,list.name,list.lastName,list.salary,list.sector);
@@ -236,7 +233,7 @@ int printEmployees(Employee* list, int len)
 
 	if(list!=NULL && len>0)
     {
-    	printf("\n%5s %15s %15s %10s %5s\n","ID","NOMBRE","APELLIDO","SALARIO","SECTOR");
+    	printf("\n%5s %15s %15s %10s %7s\n","ID","NOMBRE","APELLIDO","SALARIO","SECTOR");
         for(i=0;i<len;i++)
         {
         	printOneEmployee(list[i]);
@@ -253,6 +250,7 @@ int inform(Employee* list, int len)
 	int order;
 	float bufferTotalSalary;
 	float bufferAverageSalary;
+	int bufferTotalEmployeesAboveAverageSalary;
 
 	if(list!=NULL && len>0)
 	{
@@ -267,7 +265,7 @@ int inform(Employee* list, int len)
 				switch(option)
 				{
 				case 1:
-					if(utn_getNumber(&order,"\nIngrese en que orden quiere ver la lista [0-UP/1-DOWN]: ","\nError",0,1,3)==SUCCESS)
+					if(utn_getNumber(&order,"\nIngrese en que orden quiere ver la lista [1-UP/0-DOWN]: ","\nError",0,1,3)==SUCCESS)
 					{
 						sortEmployees(list, len,order);
 						printEmployees(list, len);
@@ -281,7 +279,10 @@ int inform(Employee* list, int len)
 					}
 					printf("\nLos empleados que superan el salario promedio son: \n");
 					printf("\n%5s %15s %15s %10s %5s\n","ID","NOMBRE","APELLIDO","SALARIO","SECTOR");
-					printEmployeesAboveAverageSalary(list,len);
+					if(printEmployeesAboveAverageSalary(list,len,&bufferTotalEmployeesAboveAverageSalary)==SUCCESS)
+					{
+						printf("\n\nCantidad total: %d",bufferTotalEmployeesAboveAverageSalary);
+					}
 					break;
 				}
 			}
@@ -380,21 +381,24 @@ int averageSalary(Employee* list, int len, float* finalAverageSalary)
 	return result;
 }
 
-int printEmployeesAboveAverageSalary(Employee* list, int len)
+int printEmployeesAboveAverageSalary(Employee* list, int len, int* qtyEmployeesAboveAverageSalary)
 {
 	int result = ERROR;
 	float bufferAverageSalary;
 	int i;
+	int counterEmployees=0;
 
 	if(averageSalary(list,len,&bufferAverageSalary)==SUCCESS)
 	{
 		for(i=0; i<len; i++)
 		{
-			if(list[i].salary >= bufferAverageSalary)
+			if(list[i].isEmpty == FALSE && list[i].salary >= bufferAverageSalary)
 			{
 				printOneEmployee(list[i]);
+				counterEmployees++;
 			}
 		}
+		*qtyEmployeesAboveAverageSalary = counterEmployees;
 		result = SUCCESS;
 	}
 	return result;
