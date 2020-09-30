@@ -55,7 +55,7 @@ int main(void) {
 						{
 							printf("\nModificacion realizada con exito\n");
 						} else {
-							printf("\nNo se puedo realizar la modificacion. No existen cargas con ese id\n");
+							printf("\nNo se puedo realizar la modificacion o no existen cargas con ese id\n");
 						}
 					} else {
 						printf("\nDebe cargar datos primero");
@@ -70,7 +70,7 @@ int main(void) {
 						{
 							printf("\nBaja realizada con exito\n");
 						} else {
-							printf("\nNo se puedo realizar la baja. No existen cargas con ese id\n");
+							printf("\nNo se puedo realizar la baja o no existen cargas con ese id\n");
 						}
 					} else {
 						printf("\nDebe cargar datos primero");

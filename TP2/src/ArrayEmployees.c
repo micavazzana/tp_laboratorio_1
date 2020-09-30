@@ -56,10 +56,10 @@ int loadUpEmployee(Employee* list, int len,int* id)
 
 	if(list!=NULL && len>0 && id!=NULL && findEmptyIndex(list,len)!=ERROR)//in addition to validating the parameters, ensures that there is room before making the user load data
 	{
-		if(utn_getName(bufferEmployee.name,NAME_LEN,"\nIngrese nombre: ","\nError", 3)==SUCCESS &&
-			utn_getName(bufferEmployee.lastName,NAME_LEN,"\nIngrese apellido: ","\nError", 3)==SUCCESS &&
-			utn_getFloatNumber(&bufferEmployee.salary, "\nIngrese salario: ","\nError",0,FLT_MAX,3)==SUCCESS &&
-			utn_getNumber(&bufferEmployee.sector, "\nIngrese sector: ","\nError",0,INT_MAX,3)==SUCCESS &&
+		if(utn_getName(bufferEmployee.name,NAME_LEN,"\nIngrese nombre: ","\nError, debe ingresar un nombre", 3)==SUCCESS &&
+			utn_getName(bufferEmployee.lastName,NAME_LEN,"\nIngrese apellido: ","\nError, debe ingresar un apellido", 3)==SUCCESS &&
+			utn_getFloatNumber(&bufferEmployee.salary, "\nIngrese salario: ","\nError, debe ingresar un salario valido",0,FLT_MAX,3)==SUCCESS &&
+			utn_getNumber(&bufferEmployee.sector, "\nIngrese sector: ","\nError, debe ingresar un sector valido",0,INT_MAX,3)==SUCCESS &&
 			addEmployee(list,len,*id,bufferEmployee.name,bufferEmployee.lastName,bufferEmployee.salary,bufferEmployee.sector)==SUCCESS)
 		{
 			(*id)++;
@@ -72,19 +72,17 @@ int loadUpEmployee(Employee* list, int len,int* id)
 int addEmployee(Employee* list, int len, int id, char name[],char lastName[],float salary,int sector)
 {
 	int result = ERROR;
-	Employee bufferEmployee;
 	int index;
 
 	if(list!=NULL && len>0 && id>0 && name!=NULL && lastName!=NULL && salary>=0 && sector>0)//I don't ask if there is space because I already check it when I ask for the data
 	{
-		bufferEmployee.id = id;
-		strncpy(bufferEmployee.name, name,NAME_LEN);
-		strncpy(bufferEmployee.lastName,lastName,NAME_LEN);
-		bufferEmployee.salary = salary;
-		bufferEmployee.sector = sector;
-		bufferEmployee.isEmpty = FALSE;
 		index = findEmptyIndex(list,len);
-		list[index] = bufferEmployee;
+		list[index].id = id;
+		strncpy(list[index].name, name,NAME_LEN);
+		strncpy(list[index].lastName,lastName,NAME_LEN);
+		list[index].salary = salary;
+		list[index].sector = sector;
+		list[index].isEmpty = FALSE;
 		result = SUCCESS;
 	}
 	return result;
@@ -117,7 +115,7 @@ int modifyEmployee(Employee* list, int len, int id)
 	Employee bufferEmployee;
 
 	index = findEmployeeById(list,len,id);
-	if(list!=NULL && len>0 && id>0 && index != ERROR)
+	if(list!=NULL && len>0 && id>0 && index != ERROR && list[index].isEmpty == FALSE)
 	{
 		do {
 			if(utn_getNumber(&option,"\n\nIngrese una opcion: "
@@ -125,38 +123,44 @@ int modifyEmployee(Employee* list, int len, int id)
 					"\n2.Modificar Apellido "
 					"\n3.Modificar Salario "
 					"\n4.Modificar Sector"
-					"\n5.Volver al menu principal\n",
-					"Error, elija una opcion valida\n", 1, 5, 3)==SUCCESS) {
+					"\n5.Volver al menu principal\n", "Error, elija una opcion valida\n", 1, 5, 3)==SUCCESS) {
 				switch(option)
 				{
 				case 1:
-					if(utn_getName(bufferEmployee.name,NAME_LEN,"\nIngrese nombre: ","\nError", 3)==SUCCESS)
-					{
+					if(utn_getName(bufferEmployee.name,NAME_LEN,"\nIngrese nombre: ","\nError, debe ingresar un nombre", 3)==SUCCESS) {
 						strncpy(list[index].name,bufferEmployee.name,NAME_LEN);
+						result = SUCCESS;
+					} else {
+						result = ERROR;
 					}
 					break;
 				case 2:
-					if(utn_getName(bufferEmployee.lastName,NAME_LEN,"\nIngrese apellido: ","\nError", 3)==SUCCESS)
-					{
+					if(utn_getName(bufferEmployee.lastName,NAME_LEN,"\nIngrese apellido: ","\nError, debe ingresar un apellido", 3)==SUCCESS) {
 						strncpy(list[index].lastName,bufferEmployee.lastName,NAME_LEN);
+					result = SUCCESS;
+					} else {
+						result = ERROR;
 					}
 					break;
 				case 3:
-					if(utn_getFloatNumber(&bufferEmployee.salary, "\nIngrese salario: ","\nError",0,FLT_MAX,3)==SUCCESS)
-					{
+					if(utn_getFloatNumber(&bufferEmployee.salary, "\nIngrese salario: ","\nError, debe ingresar un salario valido",0,FLT_MAX,3)==SUCCESS) {
 						list[index].salary = bufferEmployee.salary;
+						result = SUCCESS;
+					} else {
+						result = ERROR;
 					}
 					break;
 				case 4:
-					if(utn_getNumber(&bufferEmployee.sector, "\nIngrese sector: ","\nError",0,INT_MAX,3)==SUCCESS)
-					{
+					if(utn_getNumber(&bufferEmployee.sector, "\nIngrese sector: ","\nError, debe ingresar un sector valido",0,INT_MAX,3)==SUCCESS) {
 						list[index].sector = bufferEmployee.sector;
+						result = SUCCESS;
+					} else {
+						result = ERROR;
 					}
 					break;
 				}
 			}
 		}while(option!=5);
-		result = SUCCESS;
 	}
 	return result;
 }
@@ -165,12 +169,16 @@ int removeEmployee(Employee* list, int len, int id)
 {
 	int result = ERROR;
 	int index;
+	char bufferAnswer[10];
 
 	index = findEmployeeById(list,len,id);
-	if(list!=NULL && len>0 && id>0 && index != ERROR)
+	if(list!=NULL && len>0 && id>0 && index != ERROR && list[index].isEmpty == FALSE)
 	{
+		if(utn_getName(bufferAnswer,10,"\nSeguro que desea eliminar? Debe ingresar 'Si' para proseguir con la baja ", "\nError,ingrese una respuesta valida.",3)== SUCCESS && strncasecmp(bufferAnswer,"si",10)==0)
+		{
 		list[index].isEmpty = TRUE;
 		result = SUCCESS;
+		}
 	}
 	return result;
 }
@@ -182,19 +190,17 @@ int sortEmployees(Employee* list, int len, int order)
 	Employee aux;
 	int disorderedState=1;
 
-	if(list != NULL && len > 0 && (order>=0 || order<=1))
+	if(list != NULL && len > 0 && (order==0 || order==1))
 	{
 		while(disorderedState)
 		{
 			disorderedState = 0;
 			for(i = 0; i < (len - 1); i++)
 			{
-
-				if(list[i].isEmpty == FALSE && list[i+1].isEmpty == FALSE &&
-				((order == UP && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
+				if((order == UP && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)>0 ||
 						(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector > list[i + 1].sector))) ||
-				(order == DOWN && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
-						(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector)))))
+				   (order == DOWN && (strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)<0 ||
+						(strncasecmp(list[i].lastName, list[i + 1].lastName,NAME_LEN)==0 && list[i].sector < list[i + 1].sector))))
 				{
 					aux = list[i];
 					list[i] = list[i + 1];
@@ -259,9 +265,9 @@ int inform(Employee* list, int len)
 				switch(option)
 				{
 				case 1:
-					if(utn_getNumber(&order,"\nIngrese en que orden quiere ver la lista [1-UP/0-DOWN]: ","\nError",0,1,3)==SUCCESS)
+					if(utn_getNumber(&order,"\nIngrese en que orden quiere ver la lista [1-UP/0-DOWN]: ","\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS &&
+							sortEmployees(list, len,order)== SUCCESS)
 					{
-						sortEmployees(list, len,order);
 						printEmployees(list, len);
 						result = SUCCESS;
 					}
@@ -271,8 +277,8 @@ int inform(Employee* list, int len)
 					{
 						printf("\nEl salario total es: %.2f \nEl salario promedio es: %.2f\n",bufferTotalSalary,bufferAverageSalary);
 					}
-					printf("\nLos empleados que superan el salario promedio son: \n");
-					printf("\n%5s %15s %15s %10s %5s\n","ID","NOMBRE","APELLIDO","SALARIO","SECTOR");
+					printf("\nLos empleados que superan el salario promedio son: \n"
+							"\n%5s %15s %15s %10s %5s\n","ID","NOMBRE","APELLIDO","SALARIO","SECTOR");
 					if(printEmployeesAboveAverageSalary(list,len,&bufferTotalEmployeesAboveAverageSalary)==SUCCESS)
 					{
 						printf("\n\nCantidad total: %d",bufferTotalEmployeesAboveAverageSalary);
