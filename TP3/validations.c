@@ -7,6 +7,32 @@
 #define FALSE 0
 
 /**
+ * \brief Validates that what you receive it is valid to a letter or hyphen.
+ * \param char *string, pointer to the string to be validated
+ * \return (0) FALSE (1) TRUE (-1) ERROR
+ */
+int isValidCompoundName(char* string, int len)
+{
+    int i ;
+    int result = ERROR;
+
+    if(string!= NULL)
+    {
+        result = TRUE;
+        for(i=0; string[i]!= '\0' && i < len; i++)
+        {
+            if((string[i] < 'a' || string [i] > 'z') && (string[i] < 'A' || string[i] > 'Z')
+            		&& (string[i] != '-' || string[0] == '-') && (string[i] != ' '))
+            {
+                result = FALSE;
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+/**
  * \brief Validates that what you receive it is a letter. Contemplates spaces.
  * \param char *string, pointer to the string to be validated
  * \return (0) FALSE (1) TRUE (-1) ERROR

@@ -5,9 +5,9 @@
 #define ERROR -1
 #define SUCCESS 0
 
-/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
+/** \brief
  *
- * \param path char*
+ * \param
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
@@ -34,10 +34,6 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 				{
 					result = ll_add(pArrayListEmployee, pEmployee);//ll_add returns 0 if Ok
 				}
-				/*if (atoi(bufferId) >= *nextId)
-				{
-					*nextId = atoi(bufferId);
-				}*/
 			} else {
 				break;
 			}
@@ -46,9 +42,9 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
+/** \brief
  *
- * \param path char*
+ * \param
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
@@ -57,7 +53,6 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
 	int result = ERROR;
 	Employee* pEmployee;
-	//int bufferId;
 
 	if (pFile != NULL && pArrayListEmployee != NULL)
 	{
@@ -67,11 +62,6 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 			if (pEmployee != NULL && fread(pEmployee,sizeof(Employee),1,pFile)==1)
 			{
 				result = ll_add(pArrayListEmployee, pEmployee);//ll_add returns 0 if Ok
-				//employee_getId???
-				/*if (bufferId >= *nextId)
-				{
-					*nextId = atoi(bufferId);
-				}*/
 			} else {
 				break;
 			}
@@ -80,10 +70,9 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-
-/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
+/** \brief
  *
- * \param path char*
+ * \param
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
@@ -93,7 +82,7 @@ int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	int result = ERROR;
 	Employee *pEmployee;
 	int bufferId;
-	char bufferName[500];
+	char bufferName[NAME_LEN];
 	int bufferWorkedHours;
 	float bufferSalary;
 	int len;
@@ -105,7 +94,7 @@ int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 		fprintf(pFile, "ID,NOMBRE,HORAS TRABAJADAS,SUELDO\n");
 		for (i = 0; i < len; i++)
 		{
-			pEmployee = ll_get(pArrayListEmployee, i);
+			pEmployee = (Employee*)ll_get(pArrayListEmployee, i);
 			if (pEmployee != NULL
 					&& employee_getId(pEmployee, &bufferId) == SUCCESS
 					&& employee_getNombre(pEmployee, bufferName) == SUCCESS
@@ -120,9 +109,9 @@ int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
+/** \brief
  *
- * \param path char*
+ * \param
  * \param pArrayListEmployee LinkedList*
  * \return int
  *
@@ -139,7 +128,7 @@ int parser_EmployeeToBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 		len = ll_len(pArrayListEmployee);
 		for (i = 0; i < len; i++)
 		{
-			pEmployee = ll_get(pArrayListEmployee, i);
+			pEmployee = (Employee*)ll_get(pArrayListEmployee, i);
 			if (pEmployee != NULL)
 			{
 				fwrite(pEmployee, sizeof(Employee), 1, pFile);

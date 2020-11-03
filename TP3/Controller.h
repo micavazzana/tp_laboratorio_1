@@ -9,3 +9,4 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
 
 int controller_findById(LinkedList* pArrayListEmployee, int id);
+int controller_printOneEmployee(LinkedList* pArrayListEmployee, int index);

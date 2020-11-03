@@ -1,6 +1,7 @@
 #ifndef VALIDATIONS_H_
 #define VALIDATIONS_H_
 
+int isValidCompoundName(char* string, int len);
 int isValidLetters(char* string, int len);
 int isValidNumber(char* num, int len);
 int isValidNumberFloat(char* num,int len);
