@@ -32,7 +32,6 @@ struct LinkedList
 #endif
 
 
-
 //Publicas
 LinkedList* ll_newLinkedList(void);
 int ll_len(LinkedList* this);

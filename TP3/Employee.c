@@ -6,11 +6,24 @@
 #define ERROR -1
 #define SUCCESS 0
 
-Employee* employee_new()
+/*
+ * \brief Pide memoria para un nuevo empleado
+ * \param void
+ * \return int Return puntero con espacio de memoria con tipo Employee*
+ */
+Employee* employee_new(void)
 {
 	return (Employee*) malloc(sizeof(Employee));
 }
 
+/*
+ * \brief Pide memoria para un nuevo empleado y setea los campos en el espacio de memoria requerido
+ * \param idStr char* id que va a setear
+ * \param nameStr char* nombre que va a setear
+ * \param workedHoursStr char* horas trabajadas que va a setear
+ * \param salaryStr char* sueldo que va a setear
+ * \return int Return puntero con espacio de memoria con tipo Employee* con los campos ya seteados
+ */
 Employee* employee_newParametros(char* idStr,char* nameStr,char* workedHoursStr, char* salaryStr)
 {
 	Employee* pEmployee = NULL;
@@ -29,11 +42,23 @@ Employee* employee_newParametros(char* idStr,char* nameStr,char* workedHoursStr,
 	return pEmployee;
 }
 
+/*
+ * \brief Libera espacio de memoria de un empleado
+ * \param this Employee* puntero a empleado
+ * \return -1 void
+ */
 void employee_delete(Employee* this)
 {
 	free(this);
 }
 
+/*
+ * \brief Carga el id en el campo del empleado
+ * \param this Employee* puntero a empleado
+ * \param id int id a cargar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si el id no es valido
+ * 					  (0) EXITO
+ */
 int employee_setId(Employee* this, int id)
 {
 	int result = ERROR;
@@ -45,6 +70,13 @@ int employee_setId(Employee* this, int id)
 	return result;
 }
 
+/*
+ * \brief Obtiene el id del empleado
+ * \param this Employee* puntero a empleado
+ * \param id int* puntero al espacio donde va a guardar el id obtenido
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al id es NULL
+ * 					  (0) EXITO
+ */
 int employee_getId(Employee* this, int* id)
 {
     int result = ERROR;
@@ -56,6 +88,13 @@ int employee_getId(Employee* this, int* id)
     return result;
 }
 
+/*
+ * \brief Carga el id en el campo del empleado (tratado como texto) y valida que el dato sea correcto
+ * \param this Employee* puntero a empleado
+ * \param id char* puntero al id que va a cargar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al id es NULL
+ * 					  (0) EXITO
+ */
 int employee_setIdTxt(Employee* this, char* id)
 {
     int result = ERROR;
@@ -67,6 +106,13 @@ int employee_setIdTxt(Employee* this, char* id)
     return result;
 }
 
+/*
+ * \brief Obtiene el id del empleado (tratado como texto)
+ * \param this Employee* puntero a empleado
+ * \param id char* puntero al espacio donde va a guardar el id obtenido
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al id es NULL
+ * 					  (0) EXITO
+ */
 int employee_getIdTxt(Employee* this, char* id)
 {
     int result = ERROR;
@@ -78,6 +124,13 @@ int employee_getIdTxt(Employee* this, char* id)
     return result;
 }
 
+/*
+ * \brief Carga el nombre en el campo del empleado y valida que el dato sea correcto
+ * \param this Employee* puntero a empleado
+ * \param name char* puntero al nombre que va a cargar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al nombre es NULL
+ * 					  (0) EXITO
+ */
 int employee_setNombre(Employee *this, char* name)
 {
 	int result = ERROR;
@@ -89,6 +142,13 @@ int employee_setNombre(Employee *this, char* name)
 	return result;
 }
 
+/*
+ * \brief Obtiene el nombre del empleado
+ * \param this Employee* puntero a empleado
+ * \param name char* puntero al espacio donde va a guardar el nombre obtenido
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al id es NULL
+ * 					  (0) EXITO
+ */
 int employee_getNombre(Employee* this, char* name)
 {
     int result = ERROR;
@@ -100,6 +160,13 @@ int employee_getNombre(Employee* this, char* name)
     return result;
 }
 
+/*
+ * \brief Carga las horas trabajadas en el campo del empleado
+ * \param this Employee* puntero a empleado
+ * \param workedHours int horas trabajadas a cargar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si el valor no es valido
+ * 					  (0) EXITO
+ */
 int employee_setHorasTrabajadas(Employee* this, int workedHours)
 {
 	int result = ERROR;
@@ -111,6 +178,13 @@ int employee_setHorasTrabajadas(Employee* this, int workedHours)
 	return result;
 }
 
+/*
+ * \brief Obtiene las horas trabajadas del empleado
+ * \param this Employee* puntero a empleado
+ * \param workedHours int* puntero al espacio donde va a guardar las horas trabajadas obtenidas
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al entero es NULL
+ * 					  (0) EXITO
+ */
 int employee_getHorasTrabajadas(Employee* this, int* workedHours)
 {
     int result = ERROR;
@@ -122,6 +196,13 @@ int employee_getHorasTrabajadas(Employee* this, int* workedHours)
     return result;
 }
 
+/*
+ * \brief Carga las horas trabajadas en el campo del empleado (tratado como texto) y valida que el dato sea correcto
+ * \param this Employee* puntero a empleado
+ * \param workedHours char* puntero a las horas trabajadas que va a guardar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al id es NULL
+ * 					  (0) EXITO
+ */
 int employee_setHorasTrabajadasTxt(Employee* this, char* workedHours)
 {
     int result = ERROR;
@@ -133,6 +214,13 @@ int employee_setHorasTrabajadasTxt(Employee* this, char* workedHours)
     return result;
 }
 
+/*
+ * \brief Obtiene las horas trabajadas del empleado (tratado como texto)
+ * \param this Employee* puntero a empleado
+ * \param workedHours char* puntero al espacio donde va a guardar las horas trabajadas obtenidas
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero a las horas trabajadas es NULL
+ * 					  (0) EXITO
+ */
 int employee_getHorasTrabajadasTxt(Employee* this, char* workedHours)
 {
     int result = ERROR;
@@ -144,6 +232,13 @@ int employee_getHorasTrabajadasTxt(Employee* this, char* workedHours)
     return result;
 }
 
+/*
+ * \brief Carga el sueldo en el campo del empleado
+ * \param this Employee* puntero a empleado
+ * \param salary float sueldo a cargar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si el valor no es valido
+ * 					  (0) EXITO
+ */
 int employee_setSueldo(Employee* this, float salary)
 {
 	int result = ERROR;
@@ -155,6 +250,13 @@ int employee_setSueldo(Employee* this, float salary)
 	return result;
 }
 
+/*
+ * \brief Obtiene el sueldo del empleado
+ * \param this Employee* puntero a empleado
+ * \param salary float* puntero al espacio donde va a guardar el sueldo obtenido
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al flotante es NULL
+ * 					  (0) EXITO
+ */
 int employee_getSueldo(Employee* this, float* salary)
 {
     int result = ERROR;
@@ -166,6 +268,13 @@ int employee_getSueldo(Employee* this, float* salary)
     return result;
 }
 
+/*
+ * \brief Carga el sueldo en el campo del empleado (tratado como texto) y valida que el dato sea correcto
+ * \param this Employee* puntero a empleado
+ * \param salary char* puntero al sueldo que va a guardar
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al sueldo es NULL
+ * 					  (0) EXITO
+ */
 int employee_setSueldoTxt(Employee* this, char* salary)
 {
     int result = ERROR;
@@ -177,6 +286,13 @@ int employee_setSueldoTxt(Employee* this, char* salary)
     return result;
 }
 
+/*
+ * \brief Obtiene el sueldo del empleado (tratado como texto)
+ * \param this Employee* puntero a empleado
+ * \param salary char* puntero al espacio donde va a guardar el sueldo obtenido
+ * \return int Return (-1) ERROR - Si el puntero a Employee* es NULL o si e puntero al sueldo es NULL
+ * 					  (0) EXITO
+ */
 int employee_getSueldoTxt(Employee* this, char* salary)
 {
     int result = ERROR;
@@ -188,95 +304,113 @@ int employee_getSueldoTxt(Employee* this, char* salary)
     return result;
 }
 
+/*
+ * \brief Compara los nombres de dos empleados
+ * \param void* puntero al primer empleado a comparar
+ * \param void* puntero al segundo empleado a comparar
+ * \return int Return (-1) Si el nombre del primer empleado es menor al segundo
+ * 					   (1) Si el nombre del primer empleado es mayor al segundo
+ * 					   (0) Si los nombres son iguales
+ */
 int employee_compareByName(void* firstEmployee, void* SecondEmployee)
 {
-	int result = -2;
+	int result = 0;//si son iguales
 	char bufferFirstEmployee[NAME_LEN];
 	char bufferSecondEmployee[NAME_LEN];
 
 	if(firstEmployee != NULL && SecondEmployee != NULL)
 	{
-		Employee* first = (Employee*)firstEmployee;
-		Employee* second = (Employee*)SecondEmployee;
-		employee_getNombre(first,bufferFirstEmployee);
-		employee_getNombre(second,bufferSecondEmployee);
+		employee_getNombre((Employee*)firstEmployee,bufferFirstEmployee);
+		employee_getNombre((Employee*)SecondEmployee,bufferSecondEmployee);
 		if(strncasecmp(bufferFirstEmployee, bufferSecondEmployee, NAME_LEN) > 0)
 		{
 			result = 1;
 		} else if (strncasecmp(bufferFirstEmployee, bufferSecondEmployee, NAME_LEN) < 0) {
 			result = -1;
-		} else {
-			result = 0;
 		}
 	}
 	return result;
 }
 
+/*
+ * \brief Compara la cantidad de horas trabajadas de dos empleados
+ * \param void* puntero al primer empleado a comparar
+ * \param void* puntero al segundo empleado a comparar
+ * \return int Return (-1) Si la cantidad de horas trabajadas del primer empleado es menor al segundo
+ * 					   (1) Si la cantidad de horas trabajadas del primer empleado es mayor al segundo
+ * 					   (0) Si la cantidad de horas trabajadas son iguales
+ */
 int employee_compareByWorkedHours(void* firstEmployee, void* SecondEmployee)
 {
-	int result = -2;
+	int result = 0; //si son iguales
 	int bufferFirstEmployee;
 	int bufferSecondEmployee;
 
 	if(firstEmployee != NULL && SecondEmployee != NULL)
 	{
-		Employee* first = (Employee*)firstEmployee;
-		Employee* second = (Employee*)SecondEmployee;
-		employee_getHorasTrabajadas(first,&bufferFirstEmployee);
-		employee_getHorasTrabajadas(second,&bufferSecondEmployee);
+		employee_getHorasTrabajadas((Employee*)firstEmployee,&bufferFirstEmployee);
+		employee_getHorasTrabajadas((Employee*)SecondEmployee,&bufferSecondEmployee);
 		if(bufferFirstEmployee > bufferSecondEmployee)
 		{
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
-		} else {
-			result = 0;
 		}
 	}
 	return result;
 }
+
+/*
+ * \brief Compara los sueldos de dos empleados
+ * \param void* puntero al primer empleado a comparar
+ * \param void* puntero al segundo empleado a comparar
+ * \return int Return (-1) Si el sueldo del primer empleado es menor al segundo
+ * 					   (1) Si el sueldo del primer empleado es mayor al segundo
+ * 					   (0) Si los sueldos son iguales
+ */
 int employee_compareBySalary(void* firstEmployee, void* SecondEmployee)
 {
-	int result = -2;
+	int result = 0; //si son iguales
 	float bufferFirstEmployee;
 	float bufferSecondEmployee;
 
 	if(firstEmployee != NULL && SecondEmployee != NULL)
 	{
-		Employee* first = (Employee*)firstEmployee;
-		Employee* second = (Employee*)SecondEmployee;
-		employee_getSueldo(first,&bufferFirstEmployee);
-		employee_getSueldo(second,&bufferSecondEmployee);
+		employee_getSueldo((Employee*)firstEmployee,&bufferFirstEmployee);
+		employee_getSueldo((Employee*)SecondEmployee,&bufferSecondEmployee);
 		if(bufferFirstEmployee > bufferSecondEmployee)
 		{
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
-		} else {
-			result = 0;
 		}
 	}
 	return result;
 }
+
+/*
+ * \brief Compara los id de dos empleados
+ * \param void* puntero al primer empleado a comparar
+ * \param void* puntero al segundo empleado a comparar
+ * \return int Return (-1) Si el id del primer empleado es menor al segundo
+ * 					   (1) Si el id del primer empleado es mayor al segundo
+ * 					   (0) Si los id son iguales
+ */
 int employee_compareById(void* firstEmployee, void* SecondEmployee)
 {
-	int result = -2;
+	int result = 0; //si son iguales
 	int bufferFirstEmployee;
 	int bufferSecondEmployee;
 
 	if(firstEmployee != NULL && SecondEmployee != NULL)
 	{
-		Employee* first = (Employee*)firstEmployee;
-		Employee* second = (Employee*)SecondEmployee;
-		employee_getId(first,&bufferFirstEmployee);
-		employee_getId(second,&bufferSecondEmployee);
+		employee_getId((Employee*)firstEmployee,&bufferFirstEmployee);
+		employee_getId((Employee*)SecondEmployee,&bufferSecondEmployee);
 		if(bufferFirstEmployee > bufferSecondEmployee)
 		{
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
-		} else {
-			result = 0;
 		}
 	}
 	return result;

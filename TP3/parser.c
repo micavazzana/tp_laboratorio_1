@@ -5,12 +5,11 @@
 #define ERROR -1
 #define SUCCESS 0
 
-/** \brief
- *
- * \param
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si el puntero al archivo es NULL o si no pudo añadir el empleado a la lista
+ * 					  (0) EXITO
  */
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
@@ -42,12 +41,11 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief
- *
- * \param
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si el puntero al archivo es NULL o si no pudo añadir el empleado a la lista
+ * 					  (0) EXITO
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
@@ -70,12 +68,13 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief
- *
- * \param
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Parsea los datos de los empleados al archivo data.csv(modo texto).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (0) EXITO (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si el puntero al archivo es NULL o si no pudo escribir el empleado al archivo
+ * 					  (0) EXITO
  */
 int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
@@ -109,12 +108,13 @@ int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief
- *
- * \param
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Parsea los datos de los empleados al archivo data.csv(modo binario).
+ * \param pFile FILE* puntero al archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (0) EXITO (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si el puntero al archivo es NULL o si no pudo escribir el empleado al archivo
+ * 					  (0) EXITO
  */
 int parser_EmployeeToBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {

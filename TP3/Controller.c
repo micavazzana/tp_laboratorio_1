@@ -13,12 +13,13 @@
 static int findMaxId(LinkedList* pArrayListEmployee);
 static int generateNewId(LinkedList* pArrayListEmployee);
 
-/** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Carga los datos de los empleados desde el archivo que recibe como parametro (modo texto).
+ * \param path char* ruta del archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * 					  (-2) ERROR - No pudo abrir el archivo
+ * 					  (0) EXITO
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
@@ -39,12 +40,13 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Carga los datos de los empleados desde el archivo que recibe como parametro (modo binario).
+ * \param path char* ruta del archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * 					  (-2) ERROR - No pudo abrir el archivo
+ * 					  (0) EXITO
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
@@ -65,12 +67,11 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Alta de empleados
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Alta de empleados - Solicita los datos de los campos al usuario y lo añade al array
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si el usuario completa erroneamente lo requerido o el id no es valido
+ * 					  (0) EXITO
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
@@ -86,8 +87,9 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 			&& utn_getNumber(&buffer.horasTrabajadas,"Ingrese horas trabajadas: ","Error", 0, 5000, 3) == SUCCESS
 			&& utn_getFloatNumber(&buffer.sueldo,"Ingrese sueldo: ","Error", 0, 100000, 3) == SUCCESS)
 		{
-			buffer.id = generateNewId(pArrayListEmployee);
-			if (employee_setNombre(pEmployee, buffer.nombre) == SUCCESS
+			buffer.id = generateNewId(pArrayListEmployee); // it returns error if there's nothing in the list
+			if (buffer.id > 0
+					&& employee_setNombre(pEmployee, buffer.nombre) == SUCCESS
 					&& employee_setHorasTrabajadas(pEmployee, buffer.horasTrabajadas) == SUCCESS
 					&& employee_setSueldo(pEmployee, buffer.sueldo) == SUCCESS
 					&& employee_setId(pEmployee,buffer.id) == SUCCESS)
@@ -99,12 +101,12 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Buscar empleado por id
- *
- * \param pArrayListEmployee LinkedList*
+/**
+ * \brief Busca un empleado por id
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
  * \param id int id buscado
- * \return int indice encontrado o (-1) si el puntero a LikedList es NULL, id invalido o empleado no encontrado
- *
+ * \return int Return Indice encontrado
+ * 					  (-1) ERROR - Si el puntero a LikedList es NULL,o id invalido o empleado no encontrado
  */
 int controller_findById(LinkedList* pArrayListEmployee, int id)
 {
@@ -131,12 +133,14 @@ int controller_findById(LinkedList* pArrayListEmployee, int id)
 	}
 	return result;
 }
-/** \brief Modificar datos de empleado
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Modificar datos de empleado - Permite al usuario elegir que campo cambiar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return Return (-1) Error - Si el puntero a LikedList es NULL o empleado no encontrado
+ * 				  (-2) Error - Si no pudo cambiar el nombre
+ * 				  (-3) Error - Si no pudo cambiar las horas trabajadas
+ * 				  (-4) Error - Si no pudo cambiar el sueldo
+ * 				  (0) EXITO
  */
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
@@ -151,7 +155,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 		if (controller_ListEmployee(pArrayListEmployee) == SUCCESS
 				&& utn_getNumber(&buffer.id, "\nIngrese el id del empleado que quiere modificar: ", "\nError!", 0, INT_MAX, 5) == SUCCESS)
 		{
-			index = controller_findById(pArrayListEmployee, buffer.id); //que hace exactamente el ll_indexOf??
+			index = controller_findById(pArrayListEmployee, buffer.id);
 			if (index != ERROR)
 			{
 				pEmployee = (Employee*) ll_get(pArrayListEmployee, index);
@@ -209,12 +213,11 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Baja de empleado
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Baja de empleado buscado por id
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o empleado no encontrado
+ *					  (0) EXITO
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
@@ -247,12 +250,11 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Listar empleados
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Listar empleados - Imprime los datos del listado de empleados
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL
+ *					  (0) EXITO
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
@@ -266,12 +268,19 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
     	printf("\n%10s %15s %15s %15s\n","ID","NOMBRE","HORAS TRABAJADAS","SUELDO\n");
     	for(i=0;i<len;i++)
     	{
-    		result = controller_printOneEmployee(pArrayListEmployee,i);
+    		result = controller_printOneEmployee(pArrayListEmployee,i); //it returns 0 if Ok.
     	}
     }
 	return result;
 }
 
+/**
+ * \brief Imprime los datos de un empleado
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \param index int indice del empleado a imprimir
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o el indice es invalido
+ *					  (0) EXITO
+ */
 int controller_printOneEmployee(LinkedList* pArrayListEmployee, int index)
 {
 	int result = ERROR;
@@ -298,12 +307,10 @@ int controller_printOneEmployee(LinkedList* pArrayListEmployee, int index)
 	return result;
 }
 
-/** \brief Ordenar empleados
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/** \brief Ordenar empleados - Permite al usuario elegir que criterio utilizar para ordenar y si quiere realizarlo de manera ascendente o descendente
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o no pudo realizar el ordenamiento
+ *					  (0) EXITO
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
@@ -322,33 +329,25 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 					"\n5.Volver al menu principal\n",
 					"Error, elija una opcion valida\n", 1, 5, 3) == SUCCESS)
 			{
-				switch (option)
+				if (option != 5 && utn_getNumber(&order,"\nIngrese el criterio con el que desea ordenar [1-ASCENDENTE/0-DESCEDENTE]: ",
+							"\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS)
 				{
-				case 1:
-					if(utn_getNumber(&order,"\nIngrese el criterio con el que desea ordenar [1-ASCENDENTE/0-DESCEDENTE]: ","\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS)
+					switch (option)
 					{
-						result = ll_sort(pArrayListEmployee, employee_compareByName,order);
-					}
-					break;
-				case 2:
-					if(utn_getNumber(&order,"\nIngrese el criterio con el que desea ordenar [1-ASCENDENTE/0-DESCEDENTE]: ","\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS)
-					{
+					case 1:
+						result = ll_sort(pArrayListEmployee, employee_compareByName,order); // ll_sort returns 0 if ok
+						break;
+					case 2:
 						result = ll_sort(pArrayListEmployee, employee_compareByWorkedHours,order);
-					}
-					break;
-				case 3:
-					if(utn_getNumber(&order,"\nIngrese el criterio con el que desea ordenar [1-ASCENDENTE/0-DESCEDENTE]: ","\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS)
-					{
+						break;
+					case 3:
 						result = ll_sort(pArrayListEmployee, employee_compareBySalary,order);
-					}
-					break;
-				case 4:
-					if(utn_getNumber(&order,"\nIngrese el criterio con el que desea ordenar [1-ASCENDENTE/0-DESCEDENTE]: ","\nError, debe ingresar o 0 o 1",0,1,3)==SUCCESS)
-					{
+						break;
+					case 4:
 						result = ll_sort(pArrayListEmployee, employee_compareById,order);
-					}
-					break;
-				} //fin switch
+						break;
+					} //fin switch
+				}
 			} else {
 				printf("Se acabaron sus reintentos, vuelva a ingresar");
 			}
@@ -357,12 +356,12 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
- *
+/**
+ * \brief Guarda los datos de los empleados desde el archivo que recibe como parametro (modo texto).
+ * \param path char* ruta del archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (0) EXITO (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * 								(-2) ERROR - No pudo abrir el archivo
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
@@ -383,12 +382,12 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 	return result;
 }
 
-/** \brief Guarda los datos de los empleados en el archivo que recibe como parametro (modo binario).
- *
- * \param path char* nombre del archivo
- * \param pArrayListEmployee LinkedList* puntero al array
- * \return int
- *
+/**
+ * \brief Guarda los datos de los empleados desde el archivo que recibe como parametro (modo binario).
+ * \param path char* ruta del archivo a cargar
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (0) EXITO (-1) ERROR - Si el puntero a LikedList es NULL o la ruta es invalida.
+ * 								(-2) ERROR - No pudo abrir el archivo
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
@@ -410,9 +409,10 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 }
 
 /**
- * \brief
- * \param
- * \return int Return
+ * \brief Busca en el array el maximo id ya cargado.
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL
+ * 					   o Maximo id encontrado en el archivo
  */
 static int findMaxId(LinkedList* pArrayListEmployee)
 {
@@ -440,23 +440,22 @@ static int findMaxId(LinkedList* pArrayListEmployee)
 }
 
 /**
- * \brief Generates a new id for a new client,
- * \param void
- * \return int Return value of the new id
+ * \brief Genera un nuevo id para un nuevo empleado - Siempre comienza a partir del ultimo id encontrado como maximo.
+ * \param pArrayListEmployee LinkedList* puntero al array de empleados
+ * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si no hay datos cargados
+ * 					  o Valor del nuevo id generado
  */
 static int generateNewId(LinkedList* pArrayListEmployee)
 {
     static int id = ERROR;
-    static int flag = 1;
 
     if(pArrayListEmployee != NULL)
     {
-		if(flag == 1)//only once, the first time after opening the file
-		{
-			id = findMaxId(pArrayListEmployee);
-			flag++;
-		}
-		id++;
+    	if(ll_isEmpty(pArrayListEmployee)==0)//ll_isEmpty returns 0 if there is data
+    	{
+    		id = findMaxId(pArrayListEmployee);
+    		id++;
+    	}
     }
     return id;
 }

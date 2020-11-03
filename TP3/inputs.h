@@ -8,6 +8,7 @@
 #ifndef INPUTS_H_
 #define INPUTS_H_
 #include "validations.h"
+
 /**
  * \brief Requests the user to enter a number (integer)
  * \param int *pNumber, pointer to the space where the value obtained will be left

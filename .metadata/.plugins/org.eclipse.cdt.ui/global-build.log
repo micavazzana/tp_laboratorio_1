@@ -541,3 +541,1028 @@ gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./vali
 ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
 Finished building target: TP3
  
+10:44:40 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c:458:16: warning: unused variable 'flag' [-Wunused-variable]
+    static int flag = 1;
+               ^
+1 warning generated.
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+10:44:49 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+10:44:50 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+10:49:08 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+10:49:09 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+10:49:11 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+10:50:21 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+10:50:23 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+10:50:24 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+11:01:03 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:170:16: warning: implicitly declaring library function 'strncasecmp' with type 'int (const char *, const char *, unsigned long)' [-Wimplicit-function-declaration]
+                                                                                                && strncasecmp(bufferAnswer, "si", 10) == 0)
+                                                                                                   ^
+../main.c:170:16: note: include the header <strings.h> or explicitly provide a declaration for 'strncasecmp'
+1 warning generated.
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+11:01:41 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+11:01:43 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+11:03:47 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+11:03:49 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+11:03:55 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+11:03:56 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+11:03:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:01:10 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c:337:44: warning: incompatible pointer types passing 'int (Employee *, Employee *)' to parameter of type 'int (*)(void *, void *)' [-Wincompatible-pointer-types]
+                                                result = ll_sort(pArrayListEmployee, employee_compareByName,order); // ll_sort returns 0 if ok
+                                                                                     ^~~~~~~~~~~~~~~~~~~~~~
+../LinkedList.h:55:37: note: passing argument to parameter 'pFunc' here
+int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+                                    ^
+1 warning generated.
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+12:01:19 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:01:21 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:02:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c:191:5: error: conflicting types for 'employee_compareByName'
+int employee_compareByName(Employee* firstEmployee, Employee* SecondEmployee)
+    ^
+../Employee.h:170:5: note: previous declaration is here
+int employee_compareByName(void*, void*);
+    ^
+1 error generated.
+make: *** [Employee.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:02:13 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+12:02:17 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:02:18 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:04:44 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c:337:44: warning: incompatible integer to pointer conversion passing 'int' to parameter of type 'int (*)(void *, void *)' [-Wint-conversion]
+                                                result = ll_sort(pArrayListEmployee, employee_compareByName(pArrayListEmployee,pArrayListEmployee+1),order); // ll_sort returns 0 if ok
+                                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../LinkedList.h:55:37: note: passing argument to parameter 'pFunc' here
+int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+                                    ^
+1 warning generated.
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+12:05:01 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+12:05:03 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:33:00 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:33:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:42:55 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:42:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:54:30 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:55:23 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:55:25 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:56:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:56:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:56:47 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c:54:6: warning: unused variable 'r' [-Wunused-variable]
+        int r;
+            ^
+1 warning generated.
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:56:48 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:58:10 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+15:58:11 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+15:58:14 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:47 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:02:51 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:53 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:54 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:56 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:56 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:02:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:07:36 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c:346:5: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:361:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:346:2: note: remove the 'if' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:346:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~
+../Employee.c:361:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:346:5: note: remove the '&&' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:342:12: note: initialize the variable 'result' to silence this warning
+        int result;
+                  ^
+                   = 0
+../Employee.c:369:5: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:384:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:369:2: note: remove the 'if' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:369:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~
+../Employee.c:384:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:369:5: note: remove the '&&' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:365:12: note: initialize the variable 'result' to silence this warning
+        int result;
+                  ^
+                   = 0
+../Employee.c:392:5: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:407:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:392:2: note: remove the 'if' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:392:5: warning: variable 'result' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~
+../Employee.c:407:9: note: uninitialized use occurs here
+        return result;
+               ^~~~~~
+../Employee.c:392:5: note: remove the '&&' if its condition is always true
+        if(firstEmployee != NULL && SecondEmployee != NULL)
+           ^~~~~~~~~~~~~~~~~~~~~~~~
+../Employee.c:388:12: note: initialize the variable 'result' to silence this warning
+        int result;
+                  ^
+                   = 0
+6 warnings generated.
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:08:24 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:08:25 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:09:12 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:09:14 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:09:15 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:12:20 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:15:27 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:17:14 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:17:15 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:17:18 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:20:54 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:20:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:20:59 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:23:03 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:23:05 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:23:06 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:27:53 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:27:54 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:27:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:28:51 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:28:53 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:29:51 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:29:52 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:31:52 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:31:54 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:31:58 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:33:28 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:33:29 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:33:31 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:09 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:34:10 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:12 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:14 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:15 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:16 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:17 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:20 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:28 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:32 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:43:52 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c:318:6: warning: unused variable 'order' [-Wunused-variable]
+        int order;
+            ^
+../Controller.c:319:6: warning: unused variable 'option' [-Wunused-variable]
+        int option;
+            ^
+2 warnings generated.
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:43:53 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:43:55 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:44:22 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:44:30 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:52:57 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:52:58 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:53:00 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:53:36 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:54:20 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:54:21 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:55:18 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:55:19 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:55:21 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:56:11 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:56:12 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:58:01 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:58:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:58:59 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:59:02 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+16:59:53 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+16:59:55 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+17:01:24 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+17:01:25 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+17:01:27 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.
+17:02:56 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+17:04:38 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+17:19:36 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../inputs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"inputs.d" -MT"inputs.o" -o "inputs.o" "../inputs.c"
+Finished building: ../inputs.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c:54:6: warning: unused variable 'r' [-Wunused-variable]
+        int r;
+            ^
+1 warning generated.
+Finished building: ../parser.c
+ 
+Building file: ../validations.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"validations.d" -MT"validations.o" -o "validations.o" "../validations.c"
+Finished building: ../validations.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+17:19:48 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+17:26:52 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.

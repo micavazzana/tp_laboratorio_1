@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
@@ -15,10 +16,10 @@ int main()
 	LinkedList *listaEmpleados = ll_newLinkedList();
 	int result;
 	int isSaved = FALSE;
+	char bufferAnswer[10];
 
 	do
 	{
-
 		if(utn_getNumber(&option,
 							"\n\nIngrese una opcion: \n"
 							"\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)."
@@ -35,7 +36,8 @@ int main()
 			switch (option)
 			{
 				case 1:
-					if (controller_loadFromText("data.csv", listaEmpleados) == SUCCESS) {
+					result = controller_loadFromText("data.csv", listaEmpleados);
+					if (result == SUCCESS) {
 						printf("\nArchivo cargado con exito!\n");
 					} else if(result == -2){
 						printf("\nNo se pudo abrir el archivo.\n");
@@ -44,7 +46,8 @@ int main()
 					}
 					break;
 				case 2:
-					if ((result = controller_loadFromBinary("data.csv", listaEmpleados) == SUCCESS)) {
+					result = controller_loadFromBinary("data.bin", listaEmpleados);
+					if (result == SUCCESS) {
 						printf("\nArchivo cargado con exito!\n");
 					} else if(result == -2){
 						printf("\nNo se pudo abrir el archivo.\n");
@@ -124,11 +127,14 @@ int main()
 				case 8:
 					if(ll_isEmpty(listaEmpleados)==0)
 					{
-						if (controller_saveAsText("dataComoTexto.csv", listaEmpleados) == SUCCESS) {
+						result = controller_saveAsText("dataTexto.csv", listaEmpleados);
+						if (result == SUCCESS) {
 							printf("\nArchivo guardado con exito!\n");
 							isSaved = TRUE;
-						} else {
+						} else if(result == -2){
 							printf("\nNo se pudo guardar.\n");
+						} else {
+							printf("\nError. Direccion de memoria invalida.\n");
 						}
 					} else {
 						printf("\nDebe cargar el archivo primero.\n");
@@ -137,11 +143,14 @@ int main()
 				case 9:
 					if(ll_isEmpty(listaEmpleados)==0)
 					{
-						if (controller_saveAsBinary("dataComoBinario.csv", listaEmpleados) == SUCCESS) {
+						result = controller_saveAsBinary("dataBin.bin", listaEmpleados);
+						if (result == SUCCESS) {
 							printf("\nArchivo guardado con exito!\n");
 							isSaved = TRUE;
-						} else {
+						} else if(result == -2){
 							printf("\nNo se pudo guardar.\n");
+						} else {
+							printf("\nError. Direccion de memoria invalida.\n");
 						}
 					} else {
 						printf("\nDebe cargar el archivo primero.\n");
@@ -150,14 +159,20 @@ int main()
 				case 10:
 					if(isSaved == TRUE)
 					{
-						//ll_clear // libero la memoria con delete y con clear borro los punteros a la lista?
+						ll_clear(listaEmpleados);
 						ll_deleteLinkedList(listaEmpleados);
 						printf("\nHasta luego!\n");
 					} else if(ll_isEmpty(listaEmpleados)==1) {
-
+						printf("\nNo ha realizado nada en el programa. Adios\n");
 					} else if (isSaved == FALSE){
-						printf("\nDebe guardar el archivo primero.\n");
-						option = 0;
+						printf("\nDebe guardar el archivo primero. Desea hacerlo?\n");
+						if(utn_getName(bufferAnswer, 10, "\nDebe ingresar 'Si' para volver al menu y hacerlo: ", "\nError,ingrese una respuesta valida.", 3) == SUCCESS
+												&& strncasecmp(bufferAnswer, "si", 10) == 0) {
+							option = 0;
+						} else {
+							printf("\nHa decidido no guardar el archivo.\nHasta luego!\n");
+							option = 10;
+						}
 					}
 					break;
 			}
