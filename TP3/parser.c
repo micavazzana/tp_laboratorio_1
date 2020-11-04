@@ -61,6 +61,7 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 			{
 				result = ll_add(pArrayListEmployee, pEmployee);//ll_add returns 0 if Ok
 			} else {
+				employee_delete(pEmployee);
 				break;
 			}
 		} while (!feof(pFile));

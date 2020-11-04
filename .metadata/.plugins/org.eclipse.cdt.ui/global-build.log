@@ -1579,3 +1579,32 @@ gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./vali
 ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
 Finished building target: TP3
  
+20:14:13 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+20:41:56 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building target: TP3
+Invoking: MacOS X C Linker
+gcc  -o "TP3"  ./Controller.o ./Employee.o ./inputs.o ./main.o ./parser.o ./validations.o   /Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a
+ld: warning: object file (/Users/micavazzana/tp_laboratorio_1/TP3/LinkedList.a(LinkedList.o)) was built for newer OSX version (10.15) than being linked (10.13)
+Finished building target: TP3
+ 
+20:41:58 **** Incremental Build of configuration Debug for project TP3 ****
+make all 
+make: Nothing to be done for `all'.

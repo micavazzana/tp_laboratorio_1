@@ -308,25 +308,30 @@ int employee_getSueldoTxt(Employee* this, char* salary)
  * \brief Compara los nombres de dos empleados
  * \param void* puntero al primer empleado a comparar
  * \param void* puntero al segundo empleado a comparar
- * \return int Return (-1) Si el nombre del primer empleado es menor al segundo
+ * \return int Return (-2) Error
+ * 					  (-1) Si el nombre del primer empleado es menor al segundo
  * 					   (1) Si el nombre del primer empleado es mayor al segundo
  * 					   (0) Si los nombres son iguales
  */
 int employee_compareByName(void* firstEmployee, void* SecondEmployee)
 {
-	int result = 0;//si son iguales
+	int result = -2;
 	char bufferFirstEmployee[NAME_LEN];
 	char bufferSecondEmployee[NAME_LEN];
+	int strCompare;
 
 	if(firstEmployee != NULL && SecondEmployee != NULL)
 	{
 		employee_getNombre((Employee*)firstEmployee,bufferFirstEmployee);
 		employee_getNombre((Employee*)SecondEmployee,bufferSecondEmployee);
-		if(strncasecmp(bufferFirstEmployee, bufferSecondEmployee, NAME_LEN) > 0)
+		strCompare = strncasecmp(bufferFirstEmployee, bufferSecondEmployee, NAME_LEN);
+		if(strCompare > 0)
 		{
 			result = 1;
-		} else if (strncasecmp(bufferFirstEmployee, bufferSecondEmployee, NAME_LEN) < 0) {
+		} else if (strCompare < 0) {
 			result = -1;
+		} else {
+			result = 0;
 		}
 	}
 	return result;
@@ -336,13 +341,14 @@ int employee_compareByName(void* firstEmployee, void* SecondEmployee)
  * \brief Compara la cantidad de horas trabajadas de dos empleados
  * \param void* puntero al primer empleado a comparar
  * \param void* puntero al segundo empleado a comparar
- * \return int Return (-1) Si la cantidad de horas trabajadas del primer empleado es menor al segundo
+ * \return int Return (-2) Error
+ *					  (-1) Si la cantidad de horas trabajadas del primer empleado es menor al segundo
  * 					   (1) Si la cantidad de horas trabajadas del primer empleado es mayor al segundo
  * 					   (0) Si la cantidad de horas trabajadas son iguales
  */
 int employee_compareByWorkedHours(void* firstEmployee, void* SecondEmployee)
 {
-	int result = 0; //si son iguales
+	int result = -2;
 	int bufferFirstEmployee;
 	int bufferSecondEmployee;
 
@@ -355,6 +361,8 @@ int employee_compareByWorkedHours(void* firstEmployee, void* SecondEmployee)
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
+		} else {
+			result = 0;
 		}
 	}
 	return result;
@@ -364,13 +372,14 @@ int employee_compareByWorkedHours(void* firstEmployee, void* SecondEmployee)
  * \brief Compara los sueldos de dos empleados
  * \param void* puntero al primer empleado a comparar
  * \param void* puntero al segundo empleado a comparar
- * \return int Return (-1) Si el sueldo del primer empleado es menor al segundo
+ * \return int Return (-2) Error
+ * 					  (-1) Si el sueldo del primer empleado es menor al segundo
  * 					   (1) Si el sueldo del primer empleado es mayor al segundo
  * 					   (0) Si los sueldos son iguales
  */
 int employee_compareBySalary(void* firstEmployee, void* SecondEmployee)
 {
-	int result = 0; //si son iguales
+	int result = -2;
 	float bufferFirstEmployee;
 	float bufferSecondEmployee;
 
@@ -383,6 +392,8 @@ int employee_compareBySalary(void* firstEmployee, void* SecondEmployee)
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
+		} else {
+			result = 0;
 		}
 	}
 	return result;
@@ -392,13 +403,14 @@ int employee_compareBySalary(void* firstEmployee, void* SecondEmployee)
  * \brief Compara los id de dos empleados
  * \param void* puntero al primer empleado a comparar
  * \param void* puntero al segundo empleado a comparar
- * \return int Return (-1) Si el id del primer empleado es menor al segundo
+ * \return int Return (-2) Error
+ * 					  (-1) Si el id del primer empleado es menor al segundo
  * 					   (1) Si el id del primer empleado es mayor al segundo
  * 					   (0) Si los id son iguales
  */
 int employee_compareById(void* firstEmployee, void* SecondEmployee)
 {
-	int result = 0; //si son iguales
+	int result = -2;
 	int bufferFirstEmployee;
 	int bufferSecondEmployee;
 
@@ -411,6 +423,8 @@ int employee_compareById(void* firstEmployee, void* SecondEmployee)
 			result = 1;
 		} else if (bufferFirstEmployee < bufferSecondEmployee) {
 			result = -1;
+		} else {
+			result = 0;
 		}
 	}
 	return result;
