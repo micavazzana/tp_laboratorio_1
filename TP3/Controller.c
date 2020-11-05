@@ -9,6 +9,8 @@
 #include "Controller.h"
 #define ERROR -1
 #define SUCCESS 0
+#define TRUE 1
+#define FALSE 0
 
 static int findMaxId(LinkedList* pArrayListEmployee);
 static int generateNewId(LinkedList* pArrayListEmployee);
@@ -440,7 +442,9 @@ static int findMaxId(LinkedList* pArrayListEmployee)
 }
 
 /**
- * \brief Genera un nuevo id para un nuevo empleado - Siempre comienza a partir del ultimo id encontrado como maximo.
+ * \brief Genera un nuevo id para un nuevo empleado
+ * 		  Se inicializa a partir del ultimo id encontrado como maximo, si es que hay datos cargados de un archivo.
+ * 		  Solo busca el maximo una vez, y luego sigue otorgando id a partir del ultimo que dio.
  * \param pArrayListEmployee LinkedList* puntero al array de empleados
  * \return int Return (-1) ERROR - Si el puntero a LikedList es NULL o si no hay datos cargados
  * 					  o Valor del nuevo id generado
@@ -448,14 +452,16 @@ static int findMaxId(LinkedList* pArrayListEmployee)
 static int generateNewId(LinkedList* pArrayListEmployee)
 {
     static int id = ERROR;
+    static int isFirstTime = TRUE;
 
     if(pArrayListEmployee != NULL)
     {
-    	if(ll_isEmpty(pArrayListEmployee)==0)//ll_isEmpty returns 0 if there is data
+    	if(ll_isEmpty(pArrayListEmployee) == 0 && isFirstTime == TRUE)//ll_isEmpty returns 0 if there is data, flag isFirstTime is for only doing this once
     	{
     		id = findMaxId(pArrayListEmployee);
-    		id++;
+    		isFirstTime = FALSE;
     	}
+    	id++;
     }
     return id;
 }
