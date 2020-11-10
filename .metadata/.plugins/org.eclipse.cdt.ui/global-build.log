@@ -995,3 +995,379 @@ Finished building target: TP4
 19:44:40 **** Incremental Build of configuration Debug for project TP4 ****
 make all 
 make: Nothing to be done for `all'.
+22:17:44 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:17:46 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:17:58 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:17:59 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:26 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:41:28 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:30 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:31 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:32 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:33 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:33 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:34 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:41:35 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:42:06 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:42:07 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:42:37 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:42:37 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:42:38 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:43:18 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:43:19 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:43:20 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:43:21 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:44:57 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:44:58 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:44:59 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:44:59 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:45:00 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:45:30 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:45:30 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:45:31 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:45:32 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:54:06 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:54:14 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:54:15 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:54:46 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:54:46 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:54:47 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:58:39 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:58:40 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:59:24 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+22:59:25 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+22:59:26 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:00:04 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:00:04 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:00:05 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:00:06 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:01:29 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:01:30 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:01:39 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:01:39 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:01:40 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:01:41 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:02:33 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:02:34 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:02:34 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:02:48 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:02:49 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:03:07 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 
+23:03:08 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:03:09 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:03:10 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+make: Nothing to be done for `all'.
+23:04:07 **** Incremental Build of configuration Debug for project TP4 ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: TP4
+Invoking: MacOS X C Linker
+gcc  -o "TP4"  ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: TP4
+ 

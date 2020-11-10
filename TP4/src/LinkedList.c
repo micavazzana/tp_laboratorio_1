@@ -428,7 +428,22 @@ int ll_contains(LinkedList* this, void* pElement)
 int ll_containsAll(LinkedList* this,LinkedList* this2)
 {
     int returnAux = -1;
+    void* pElement;
+    int i;
 
+    if(this != NULL && this2 != NULL)
+    {
+    	returnAux = 1; // si no entra al if, retorna 1, no encontro ningun elemento que no estuviera en la lista
+    	for(i=0; i<ll_len(this2);i++)
+    	{
+    		pElement = ll_get(this2, i);
+    		if(pElement != NULL && ll_contains(this, pElement) == 0)//si el elemento no esta
+    		{
+    			returnAux = 0;
+    			break;
+    		}
+    	}
+    }
     return returnAux;
 }
 
@@ -445,7 +460,24 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
 LinkedList* ll_subList(LinkedList* this,int from,int to)
 {
     LinkedList* cloneArray = NULL;
+    int i;
+    void* pElement;
 
+    if(this != NULL && from >= 0 && from <= ll_len(this) && to >= 0 && to <= ll_len(this))
+    {
+    	cloneArray = ll_newLinkedList();
+    	if (cloneArray != NULL)
+    	{
+			for(i=from;i<to;i++)
+			{
+				pElement = ll_get(this, i);
+				if(pElement != NULL)
+				{
+					ll_add(cloneArray,pElement);
+				}
+			}
+    	}
+    }
     return cloneArray;
 }
 
@@ -459,6 +491,10 @@ LinkedList* ll_clone(LinkedList* this)
 {
     LinkedList* cloneArray = NULL;
 
+    if(this != NULL)
+    {
+    	cloneArray = ll_subList(this,0,ll_len(this));
+    }
     return cloneArray;
 }
 
@@ -472,7 +508,33 @@ LinkedList* ll_clone(LinkedList* this)
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 {
     int returnAux =-1;
+	int i;
+	int disorderedState = 1;
+	int criteria;
+	void* pElement;
+	void* pElement2;
 
+	if (this != NULL && pFunc != NULL && (order == 0 || order == 1))
+	{
+		while (disorderedState)
+		{
+			disorderedState = 0;
+			for (i = 0; i < ll_len(this)- 1; i++)
+			{
+				pElement = ll_get(this,i);
+				pElement2 = ll_get(this,i+1);
+				criteria = pFunc(pElement,pElement2);
+				if ((order == 1 && criteria == 1)
+						  ||
+					(order == 0 && criteria == -1))
+				{
+					ll_set(this,i,pElement2);
+					ll_set(this,i+1,pElement);
+					disorderedState = 1;
+				}
+			}
+		}
+		returnAux = 0;
+	}
     return returnAux;
-
 }
