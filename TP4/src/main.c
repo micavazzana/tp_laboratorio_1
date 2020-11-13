@@ -34,7 +34,7 @@ int main(void)
 	//startTesting(8);  // ll_remove
 	//startTesting(9);  // ll_clear
 	//startTesting(10); // ll_deleteLinkedList
-	//startTesting(11); // ll_indexOf
+	startTesting(11); // ll_indexOf
 	//startTesting(12); // ll_isEmpty
 	//startTesting(13); // ll_push
 	//startTesting(14); // ll_pop
