@@ -538,8 +538,14 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     return returnAux;
 }
 
-typedef int(*Function)(void*);
+/****************** NUEVAS HECHAS EN CLASE **************************/
 
+/** \brief Itera la lista y utiliza a la funcion criterio en cada iteracion
+ * \param this LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
+ *                      ( 0) Si ok
+ */
 int ll_map(LinkedList* this, Function pFunc)
 {
 	int returnAux = -1;
@@ -553,10 +559,17 @@ int ll_map(LinkedList* this, Function pFunc)
 			pElemento = ll_get(this,i);
 			pFunc(pElemento);
 		}
+		returnAux = 0;
 	}
 	return returnAux;
 }
 
+/** \brief Filtra la lista usando a la funcion criterio recibida como parametro
+ * \param this LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
+ *                      ( 0) Si ok
+ */
 int ll_filter(LinkedList * this, Function pFunc)
 {
 	int returnAux = -1;
@@ -572,12 +585,89 @@ int ll_filter(LinkedList * this, Function pFunc)
 			if(pAux != NULL)
 			{
 				criterio = pFunc(pAux);
-				if(criterio)
+				if(criterio == 0)
 				{
-					if(ll_remove(this,i))
-					{
-						returnAux = 0;
-					}
+					returnAux = ll_remove(this,i);
+				}
+			}
+		}
+	}
+	return returnAux;
+}
+
+/** \brief Reduce la lista a un numero (tipo Int), usando a la funcion criterio recibida como parametro
+ * \param this LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return int Retorna acum - Valor acumulado o (0) Error: si el puntero a la listas es NULL
+ */
+int ll_reduceInt(LinkedList* this, Function pFunc)
+{
+	void *pAux;
+	int i;
+	int acum = 0;
+
+	if (this != NULL && pFunc != NULL)
+	{
+		for (i = 0; i < ll_len(this); i++)
+		{
+			pAux = ll_get(this, i);
+			if (pAux != NULL)
+			{
+				acum = acum + pFunc(pAux);
+			}
+		}
+	}
+	return acum;
+}
+
+/** \brief Reduce la lista a un numero (tipo Float), usando a la funcion criterio recibida como parametro
+ * \param this LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \return float Retorna acum - Valor acumulado o (0) Error: si el puntero a la listas es NULL
+ */
+float ll_reduceFloat(LinkedList* this, FunctionReduceFloat pFunc)
+{
+	void *pAux;
+	int i;
+	float acum = 0;
+
+	if (this != NULL && pFunc != NULL)
+	{
+		for (i = 0; i < ll_len(this); i++)
+		{
+			pAux = ll_get(this, i);
+			if (pAux != NULL)
+			{
+				acum = acum + pFunc(pAux);
+			}
+		}
+	}
+	return acum;
+}
+
+/** \brief Filtra la lista usando a la funcion criterio recibida como parametro
+ * \param this LinkedList* Puntero a la lista
+ * \param pFunc (*pFunc) Puntero a la funcion criterio
+ * \param arg void* Puntero a argumento de tipo void*
+ * \return int Retorna  (-1) Error: si el puntero a la listas es NULL
+ *                      ( 0) Si ok
+ */
+int ll_filter2(LinkedList * this, FunctionFilter pFunc, void* arg)
+{
+	int returnAux = -1;
+	void* pAux;
+	int i;
+
+	if (this != NULL && pFunc != NULL)
+	{
+		for (i = ll_len(this) - 1; i >= 0; i--)
+		{
+			pAux = ll_get(this, i);
+			if (pAux != NULL)
+			{
+				if (pFunc(pAux,arg) == 0)
+				{
+					returnAux = ll_remove(this, i);
 				}
 			}
 		}

@@ -1,30 +1,12 @@
-17:19:04 **** Incremental Build of configuration Debug for project Mix_tp3-4 ****
+18:19:13 **** Incremental Build of configuration Debug for project Mix_tp3-4 ****
 make all 
-Building file: ../src/Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Controller.d" -MT"src/Controller.o" -o "src/Controller.o" "../src/Controller.c"
-Finished building: ../src/Controller.c
- 
 Building file: ../src/LinkedList.c
 Invoking: GCC C Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
 Finished building: ../src/LinkedList.c
- 
-Building file: ../src/main.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building file: ../src/parser.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parser.d" -MT"src/parser.o" -o "src/parser.o" "../src/parser.c"
-Finished building: ../src/parser.c
  
 Building target: Mix_tp3-4
 Invoking: MacOS X C Linker
 gcc  -o "Mix_tp3-4"  ./src/Controller.o ./src/Employee.o ./src/LinkedList.o ./src/inputs.o ./src/main.o ./src/parser.o ./src/validations.o   
 Finished building target: Mix_tp3-4
  
-17:19:17 **** Incremental Build of configuration Debug for project Mix_tp3-4 ****
-make all 
-make: Nothing to be done for `all'.

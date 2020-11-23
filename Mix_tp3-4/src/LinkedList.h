@@ -31,6 +31,15 @@ struct LinkedList
 }typedef LinkedList;
 #endif
 
+typedef int(*Function)(void*);
+typedef float(*FunctionReduceFloat)(void*);
+typedef int (*FunctionFilter)(void*, void*);
+
+int ll_map(LinkedList* this, Function pFunc);
+int ll_filter(LinkedList * this, Function pFunc);
+int ll_reduceInt(LinkedList* this, Function pFunc);
+float ll_reduceFloat(LinkedList* this, FunctionReduceFloat pFunc);
+int ll_filter2(LinkedList * this, FunctionFilter pFunc, void* arg);
 
 //Publicas
 LinkedList* ll_newLinkedList(void);
@@ -52,7 +61,3 @@ int ll_containsAll(LinkedList* this,LinkedList* this2);
 LinkedList* ll_subList(LinkedList* this,int from,int to);
 LinkedList* ll_clone(LinkedList* this);
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
-
-typedef int(*Function)(void*);
-int ll_map(LinkedList* this, Function pFunc);
-int ll_filter(LinkedList * this, Function pFunc);
